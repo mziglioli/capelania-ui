@@ -14,20 +14,15 @@ export class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = originalLoginState;
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.successSubmit = this.successSubmit.bind(this);
 	}
 
-	handleSubmit(email, password) {
-        login(email, password).then(response => {
-            console.debug("ye: " + JSON.stringify(response));
-            localStorage.setItem("user", JSON.stringify(response));
-            this.props.setUser(response);
-            this.setState(() => ({
-                redirectToReferrer: true
-            }));
-        }).catch(error => {
-            //TODO
-        })
+	successSubmit(user) {
+        localStorage.setItem("user", JSON.stringify(user));
+        this.props.setUser(user);
+        this.setState(() => ({
+            redirectToReferrer: true
+        }));
     }
 
 	render() {
@@ -40,7 +35,7 @@ export class Login extends React.Component {
 
 		return (
 			<div>
-				<LoginFunctional onSubmit={this.handleSubmit} />
+				<LoginFunctional successSubmit={this.successSubmit} />
 			</div>
 		);
 	}

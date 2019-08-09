@@ -8,7 +8,6 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
-        const {i18n} = this.props;
 	}
 
 	render() {

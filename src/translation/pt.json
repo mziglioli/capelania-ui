@@ -1,3 +1,11 @@
 {
-  "welcome": "Ben vindo ao React.js"
+  "welcome": "Ben vindo ao React.js",
+  "loginMessage":"Por favor logar aqui",
+  "login":"Logar",
+  "login_error":"Algum erro ocorreu, por favor tente novament",
+  "menu_home":"Inicio",
+  "menu_about":"Sobre",
+  "menu_contact":"Contato",
+  "menu_login":"Entrar",
+  "menu_logout":"Sair"
 }

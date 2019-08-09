@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import EN from "./translation/en.json";
+import GB from "./translation/gb.json";
 import PT from "./translation/pt.json";
 
 i18n
@@ -8,14 +8,14 @@ i18n
 .init({
     // we init with resources
     resources: {
-        en: {
-            translations: EN
+        gb: {
+            translations: GB
         },
         pt: {
             translations: PT
         }
     },
-    fallbackLng: 'en',
+    fallbackLng: 'gb',
     debug: true,
 
     // have a common namespace used around the full app

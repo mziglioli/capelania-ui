@@ -19,9 +19,7 @@ import Toolbar from "@material-ui/core/Toolbar/Toolbar";
 import Typography from "@material-ui/core/Typography/Typography";
 import MenuIcon from '@material-ui/icons/Menu';
 import { Container } from '@material-ui/core';
-import {Logout} from "../public/Logout";
 import {logout} from "../webclient/AuthClient";
-import LanguageIcon from "@material-ui/icons/Language";
 import MenuItem from "@material-ui/core/MenuItem/MenuItem";
 import Menu from '@material-ui/core/Menu';
 import Flag from 'react-world-flags';
@@ -86,21 +84,16 @@ const headerStyles = makeStyles(theme => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
-    },
-    sectionDesktop: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-        },
-    },
+    }
 }));
 
-const Header = (isAuth, user, removeUser) => {
+const Header = ({t, isAuth, user, removeUser}) => {
     const classes = headerStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-    const [flag, setFlag] = useState("gb");
+    const preSelectedLanguage = i18n.language;
+    const [flag, setFlag] = useState(preSelectedLanguage);
     const isMenuOpen = Boolean(anchorEl);
 
     function handleDrawerOpen() {
@@ -123,7 +116,7 @@ const Header = (isAuth, user, removeUser) => {
     }
     function handleLanguageGB() {
         setFlag("gb");
-        i18n.changeLanguage("en");
+        i18n.changeLanguage("gb");
         handleMenuClose();
     }
 
@@ -148,7 +141,7 @@ const Header = (isAuth, user, removeUser) => {
                         Capelania
                     </Typography>
 
-                    <div className={classes.sectionDesktop}>
+                    <div >
                         <IconButton
                             edge="end"
                             aria-label="account of current user"
@@ -183,27 +176,27 @@ const Header = (isAuth, user, removeUser) => {
                 <Divider />
                 <ListItem button key="DrawerHomeItem" component="a" href="/">
                     <ListItemIcon><HomeIcon/></ListItemIcon>
-                    <ListItemText primary={"Home"}></ListItemText>
+                    <ListItemText primary={t('menu_home')}></ListItemText>
                 </ListItem>
                 <ListItem button key={"DrawerAboutItem"} component="a" href="/about">
                     <ListItemIcon><HelpIcon/></ListItemIcon>
-                    <ListItemText primary={"About"} />
+                    <ListItemText primary={t('menu_about')} />
                 </ListItem>
                 <ListItem button key={"DrawerContactItem"} component="a" href="/contact">
                     <ListItemIcon><ContactsIcon/></ListItemIcon>
-                    <ListItemText primary={"Contact"} />
+                    <ListItemText primary={t('menu_contact')} />
                 </ListItem>
                 <Divider />
                 {isAuth && (
                     <ListItem button key={"DrawerLogoutItem"} onClick={handleLogoutClick}>
                         <ListItemIcon><AccountBoxIcon/></ListItemIcon>
-                        <ListItemText primary={"Logout"} />
+                        <ListItemText primary={t('menu_logout')} />
                     </ListItem>
                 )}
                 {!isAuth && (
                     <ListItem button key={"DrawerLoginItem"} component="a" href="/login">
                         <ListItemIcon><AccountBoxIcon/></ListItemIcon>
-                        <ListItemText primary={"Login"} />
+                        <ListItemText primary={t('menu_login')} />
                     </ListItem>
                 )}
             </Drawer>

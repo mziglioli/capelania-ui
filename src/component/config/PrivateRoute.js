@@ -1,13 +1,9 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import {getUser} from "../utils/UserUtils";
 
 export const PrivateRoute = ({ component: Component, ...rest }) => {
-    let json = localStorage.getItem('user') ;
-    console.debug("PrivateRoute: " + json);
-    let user;
-    if (json) {
-        user = JSON.parse(json);
-    }
+    let user = getUser();
     if (user && user.data && user.data.active) {
         return (
             <Route {...rest} render={props => (

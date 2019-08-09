@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome to React.js",
+  "loginMessage":"Please login here",
+  "login":"Login",
+  "login_error":"Something went wrong, please try again",
+  "menu_home":"Home",
+  "menu_about":"About",
+  "menu_contact":"Contact",
+  "menu_login":"Login",
+  "menu_logout":"Logout"
+
+}

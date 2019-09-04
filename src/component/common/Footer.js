@@ -1,18 +1,26 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography/Typography";
+import FacebookBoxIcon from 'mdi-material-ui/FacebookBox';
+import InstagramIcon from 'mdi-material-ui/Instagram';
+import WhatsappIcon from 'mdi-material-ui/Whatsapp';
+import {withTranslation} from "react-i18next";
 
-const Footer = () => {
+const Footer = ({t}) => {
     return (
         <footer flex="none" className="my-footer">
-            <div>Here will be a few things about the footer</div>
             <Typography variant="h6" gutterBottom >
-                Social:
+                {t('footer_social_media')}
             </Typography>
-            <a display="block" variant="body1" href="#" key={"Facebook"}>
-                Facebook
+            <a display="block" variant="body1" href="#" key={"FacebookBoxIcon"}>
+                <FacebookBoxIcon htmlColor="blue" />
+            </a>
+            <a display="block" variant="body1" href="#" key={"InstagramIcon"}>
+                <InstagramIcon htmlColor="red" />
+            </a>
+            <a display="block" variant="body1" href="#" key={"WhatsappIcon"}>
+                <WhatsappIcon htmlColor="green" />
             </a>
         </footer>
     );
 }
-
-export default Footer;
+export default withTranslation()(Footer);

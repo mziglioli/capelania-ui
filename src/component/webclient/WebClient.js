@@ -1,12 +1,9 @@
 import "isomorphic-fetch";
 
-/**
- * make a simple GET request to the specified endpoint
- * @param endpoint the api URL to be call
- * @return Promise<Response | never>
- * */
+const baseURL = "http://localhost:8089";
+
 export const makeGetRequest = (endpoint) => {
-    return fetch(endpoint, {
+    return fetch(baseURL + endpoint, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -15,8 +12,8 @@ export const makeGetRequest = (endpoint) => {
     })
     .then(handleResponse);
 };
-export const makePostRequest = (endpoint, body) => {
-    return fetch(endpoint, {
+export const makeLoginRequest = (endpoint, body) => {
+    return fetch(baseURL +endpoint, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -26,11 +23,47 @@ export const makePostRequest = (endpoint, body) => {
     })
     .then(handleResponse);
 };
+export const makePostRequest = (endpoint, body) => {
+    return fetch(baseURL +endpoint, {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+    })
+    .then(handleResponse);
+};
+export const makePutRequest = (endpoint, body) => {
+    return fetch(baseURL +endpoint, {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body)
+    })
+    .then(handleResponse);
+};
+export const makeDeleteRequest = (endpoint, body) => {
+    return fetch(baseURL +endpoint, {
+        method: 'DELETE',
+        credentials: 'include',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(handleResponse);
+};
+
 
 export const handleResponse = response => {
     return response.json().then(json => {
         if (!response.ok) {
-            console.debug("handleResponse: fail: ");
+            console.info("handleResponse: fail: ");
             const error = Object.assign(
                 {},
                 {
@@ -41,8 +74,11 @@ export const handleResponse = response => {
             );
             return Promise.reject(error);
         }
-        console.debug("handleResponse: success: ");
+        console.info("handleResponse: success: ");
         return json;
+    }).catch(error => {
+        console.info("handleResponse: erron on json: " + error);
+        return response;
     });
 };
 

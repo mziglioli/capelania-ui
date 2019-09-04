@@ -8,3 +8,9 @@ export const getUser = () => {
         return null;
     }
 };
+export const setUser = (user) => {
+    localStorage.setItem("user", JSON.stringify(user));
+};
+export const removeUser = () => {
+    localStorage.removeItem("user");
+};

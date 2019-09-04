@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles, useTheme, fade} from '@material-ui/core/styles';
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import Divider from "@material-ui/core/Divider/Divider";
 import ListItem from "@material-ui/core/ListItem/ListItem";
@@ -12,7 +12,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeIcon from '@material-ui/icons/Home';
 import HelpIcon from '@material-ui/icons/Help';
 import ContactsIcon from '@material-ui/icons/Contacts';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import LocalPostOfficeIcon from '@material-ui/icons/LocalPostOffice';
 import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";
@@ -21,6 +22,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { Container } from '@material-ui/core';
 import {logout} from "../webclient/AuthClient";
 import MenuItem from "@material-ui/core/MenuItem/MenuItem";
+import AccountBoxMultipleIcon from 'mdi-material-ui/AccountBoxMultiple';
+import LoginIcon from 'mdi-material-ui/Login';
+import LogoutIcon from 'mdi-material-ui/Logout';
+import ChristianityOutlineIcon from 'mdi-material-ui/ChristianityOutline';
+import CalendarMultipleCheckIcon from 'mdi-material-ui/CalendarMultipleCheck';
+
 import Menu from '@material-ui/core/Menu';
 import Flag from 'react-world-flags';
 import i18n from './../../i18n';
@@ -29,14 +36,20 @@ import { withTranslation } from "react-i18next";
 const drawerWidth = 200;
 const headerStyles = makeStyles(theme => ({
     root: {
-        display: 'flex',
-        minHeight: '80px'
+        display: 'inline-block',
+        minHeight: '20px',
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
+        backgroundColor: 'transparent',
+        boxShadow: 'none'
+    },
+    toolbar: {
+        minHeight: '48px',
+        padding: '0'
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -84,10 +97,25 @@ const headerStyles = makeStyles(theme => ({
             duration: theme.transitions.duration.enteringScreen,
         }),
         marginLeft: 0,
+    },
+    inputRoot: {
+        color: 'inherit',
+    },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 7),
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+            width: 200,
+        },
+    },
+    welcome: {
+        paddingRight: '5%',
     }
 }));
 
 const Header = ({t, isAuth, user, removeUser}) => {
+    console.info('HeaderL ' + JSON.stringify(user));
     const classes = headerStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
@@ -122,8 +150,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
 
     function handleLogoutClick() {
         logout().then(res => {
-            localStorage.removeItem('user');
-            window.open("/", "_self");
+            removeUser();
         }).catch(error => {
             //TODO
         });
@@ -132,27 +159,30 @@ const Header = ({t, isAuth, user, removeUser}) => {
     return (
         <Container maxWidth={false} className={classes.root}>
             <CssBaseline />
-            <AppBar position="fixed" className={clsx( classes.appBar, {[ classes.appBarShift]: open,})}>
-                <Toolbar>
+            <AppBar color="default" position="static" className={clsx( classes.appBar, {[ classes.appBarShift]: open,})}>
+                <Toolbar className={classes.toolbar}>
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
                         Capelania
                     </Typography>
-
-                    <div >
-                        <IconButton
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls="primary-search-account-menu"
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
-                            <Flag code={flag} height="16" />
-                        </IconButton>
-                    </div>
+                    <div className={classes.grow} />
+                    {isAuth && (
+                        <Typography className={classes.welcome} noWrap>
+                            {t('header_welcome')}: {user.name}
+                        </Typography>
+                    )}
+                    <IconButton
+                        edge="end"
+                        aria-label="account of current user"
+                        aria-controls="primary-search-account-menu"
+                        aria-haspopup="true"
+                        onClick={handleProfileMenuOpen}
+                        color="inherit"
+                    >
+                        <Flag code={flag} height="16" />
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <Menu
@@ -186,18 +216,55 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     <ListItemIcon><ContactsIcon/></ListItemIcon>
                     <ListItemText primary={t('menu_contact')} />
                 </ListItem>
-                <Divider />
+                <ListItem button key={"DrawerPublicMassItem"} component="a" href="/mass">
+                    <ListItemIcon><ChristianityOutlineIcon/></ListItemIcon>
+                    <ListItemText primary={t('menu_masses')} />
+                </ListItem>
+                <ListItem button key={"DrawerPostsItem"} component="a" href="/posts">
+                    <ListItemIcon><LocalPostOfficeIcon/></ListItemIcon>
+                    <ListItemText primary={t('menu_posts')} />
+                </ListItem>
+                <ListItem button key={"DrawerPublicEventItem"} component="a" href="/events">
+                    <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>
+                    <ListItemText primary={t('menu_events')} />
+                </ListItem>
+
                 {isAuth && (
-                    <ListItem button key={"DrawerLogoutItem"} onClick={handleLogoutClick}>
-                        <ListItemIcon><AccountBoxIcon/></ListItemIcon>
-                        <ListItemText primary={t('menu_logout')} />
-                    </ListItem>
+                    <React.Fragment>
+                        <Divider />
+                        <ListItem button key={"DrawerMassItem"} component="a" href="/auth/masses">
+                            <ListItemIcon><ChristianityOutlineIcon/></ListItemIcon>
+                            <ListItemText primary={t('menu_masses')} />
+                        </ListItem>
+                        <ListItem button key={"DrawerFeedItem"} component="a" href="/auth/feeds">
+                            <ListItemIcon><FeedbackIcon /></ListItemIcon>
+                            <ListItemText primary={t('menu_feeds')} />
+                        </ListItem>
+                        <ListItem button key={"DrawerEventItem"} component="a" href="/auth/events">
+                            <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>
+                            <ListItemText primary={t('menu_events')} />
+                        </ListItem>
+                        {user.allRoles.indexOf("ROLE_ADMIN") >= 0 && (
+                            <ListItem button key={"DrawerUserItem"} component="a" href="/auth/users">
+                                <ListItemIcon><AccountBoxMultipleIcon/></ListItemIcon>
+                                <ListItemText primary={t('menu_users')} />
+                            </ListItem>
+                        )}
+                        <Divider />
+                        <ListItem button key={"DrawerLogoutItem"} onClick={handleLogoutClick}>
+                            <ListItemIcon><LogoutIcon/></ListItemIcon>
+                            <ListItemText primary={t('menu_logout')} />
+                        </ListItem>
+                    </React.Fragment>
                 )}
                 {!isAuth && (
-                    <ListItem button key={"DrawerLoginItem"} component="a" href="/login">
-                        <ListItemIcon><AccountBoxIcon/></ListItemIcon>
-                        <ListItemText primary={t('menu_login')} />
-                    </ListItem>
+                    <React.Fragment>
+                        <Divider />
+                        <ListItem button key={"DrawerLoginItem"} component="a" href="/login">
+                            <ListItemIcon><LoginIcon/></ListItemIcon>
+                            <ListItemText primary={t('menu_login')} />
+                        </ListItem>
+                    </React.Fragment>
                 )}
             </Drawer>
         </Container>

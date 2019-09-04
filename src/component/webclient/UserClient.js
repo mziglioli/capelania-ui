@@ -3,10 +3,17 @@ const webClient = require("./WebClient");
 
 export const getAll = () => {
     console.debug("getAll");
-	return webClient.makeGetRequest("http://localhost:8089/user/all");
+	return webClient.makeGetRequest("/user/all");
 };
-
-export const getById = (id) => {
-    console.debug("login");
-    return webClient.makeGetRequest("http://localhost:8089/user/" + id);
+export const add = (user) => {
+    console.info("update mass: " + JSON.stringify(user));
+    return webClient.makePostRequest("/user/add", user);
+};
+export const update = (user) => {
+    console.info("update mass: " + JSON.stringify(user));
+    return webClient.makePutRequest("/user/update", user);
+};
+export const remove = (user) => {
+    console.info("remove mass: " + user.id);
+    return webClient.makeDeleteRequest("/user/delete/"+user.id);
 };

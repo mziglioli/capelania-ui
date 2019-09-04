@@ -1,86 +1,81 @@
 import React from 'react';
 import './App.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect
-} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from "./component/public/Home";
-import {About} from "./component/public/About";
+import About from "./component/public/About";
 import NotFound from "./component/public/NotFound";
-import {Users} from "./component/private/Users";
-import {User} from "./component/private/User";
+import ManageUser from "./component/private/ManageUser";
+import ManageMass from "./component/private/ManageMass";
 import {Login} from "./component/public/Login";
 import {PrivateRoute} from "./component/config/PrivateRoute";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from "./component/common/Footer";
-import {Contact} from "./component/public/Contact";
+import Contact from "./component/public/Contact";
 import Header from "./component/common/Header";
-import {Logout} from "./component/public/Logout";
-import { I18nextProvider } from 'react-i18next';
+import {I18nextProvider} from 'react-i18next';
 import i18n from './i18n';
-
-const defaultState = {
-    user: {},
-    isAuth: false,
-    redirectHome: false
-};
+import {getUser, removeUser, setUser} from "./component/utils/UserUtils";
+import Events from "./component/public/Events";
+import ManagePosts from "./component/private/ManagePosts";
+import Mass from "./component/public/Mass";
+import ManageEvents from "./component/private/ManageEvents";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.setUser = this.setUser.bind(this);
-        this.removeUser = this.removeUser.bind(this);
-        this.state = defaultState;
+        this.addUser = this.addUser.bind(this);
+        this.deleteUser = this.deleteUser.bind(this);
+        let loggedUser = getUser();
+        let isAuth = false;
+        if(loggedUser){
+            isAuth = true;
+        }
+        this.state = {
+            user: loggedUser,
+            isAuth: isAuth
+        };
     }
-
-    componentDidMount() {
-
-    }
-
-    setUser(user) {
+    addUser(user) {
+        setUser(user);
         this.setState({user: user, isAuth: true});
     }
-    removeUser() {
-        this.setState({user: {}, isAuth: false, redirectHome: true});
+    deleteUser() {
+        removeUser();
+        this.setState({user: {}, isAuth: false});
         window.open("/", "_self");
     }
-
     render() {
         return (
             <React.Fragment>
                 <CssBaseline />
                 <I18nextProvider i18n={ i18n }>
-                    {this.state.redirectHome && (
-                        <Redirect to={"/"} />
-                    )}
-                    {!this.state.redirectHome && (
-                        <Router>
-                            <Header isAuth={this.state.isAuth} user={this.state.user} removeUser={this.removeUser}/>
-                            <div className="contentContainer">
-                                <Switch>
-                                    <Route exact path="/" component={Home} />
-                                    <Route exact path="/about" component={About} />
-                                    <Route exact path="/contact" component={Contact} />
-                                    <Route exact path="/logout" component={Logout} />
+                    <Router>
+                        <Header isAuth={this.state.isAuth} user={this.state.user} removeUser={this.deleteUser}/>
+                        <div className="contentContainer">
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route exact path="/about" component={About} />
+                                <Route exact path="/contact" component={Contact} />
+                                <Route exact path="/logout" component={Home} />
+                                <Route exact path="/events" component={Events} />
+                                <Route exact path="/mass" component={Mass} />
 
-                                    <Route path="/user/add" component={User} />
-                                    <PrivateRoute path='/users' state={this.state} component={Users} />
+                                <PrivateRoute path='/auth/users' appState={this.state} component={ManageUser} />
+                                <PrivateRoute path='/auth/masses' appState={this.state} component={ManageMass}/>
+                                <PrivateRoute path='/auth/posts' appState={this.state} component={ManagePosts}/>
+                                <PrivateRoute path='/auth/events' appState={this.state} component={ManageEvents}/>
 
-                                    <Route path="/login"  render={(props) => (
-                                        <Login {...props} setUser={this.setUser}/>
-                                    )} />
-                                    <Route component={NotFound} />
-                                </Switch>
-                            </div>
-                            <Footer/>
-                        </Router>
-                    )}
-                </I18nextProvider>,
+                                <Route path="/login"  render={(props) => (
+                                    <Login {...props} addUser={this.addUser} appState={this.state}/>
+                                )} />
+                                <Route component={NotFound} />
+                            </Switch>
+                        </div>
+                        <Footer/>
+                    </Router>
+                </I18nextProvider>
             </React.Fragment>
         );
     }
 }
-
 export default App;

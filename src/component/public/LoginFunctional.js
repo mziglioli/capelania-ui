@@ -7,12 +7,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { withTranslation } from "react-i18next";
 import {isNotEmpty, validateEmail} from "../utils/ValidatorUtils";
-import InputLabel from "@material-ui/core/InputLabel/InputLabel";
-import FormHelperText from "@material-ui/core/FormHelperText/FormHelperText";
 import {login} from "../webclient/AuthClient";
+
 const loginStyles = makeStyles(theme => ({
     '@global': {
         body: {
@@ -28,10 +26,6 @@ const loginStyles = makeStyles(theme => ({
     avatar: {
         margin: theme.spacing(1),
         backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(1),
     },
     submit: {
         margin: theme.spacing(3, 0, 2),
@@ -62,8 +56,12 @@ const LoginFunctional = ({ t, successSubmit }) => {
         setError(false);
         if(validate(state.email, state.password)) {
             login(state.email, state.password).then(response => {
-                console.debug("ye: " + JSON.stringify(response));
-                successSubmit(response);
+                console.info("handleSubmit:result: " + JSON.stringify(response));
+                if(response.success){
+                    successSubmit(response.data);
+                }else {
+                    setError(true);
+                }
             }).catch(error => {
                 setError(true);
             })
@@ -82,39 +80,12 @@ const LoginFunctional = ({ t, successSubmit }) => {
                 <Typography component="h1" variant="h5">
                     { t('loginMessage') }
                 </Typography>
-                    <TextField
-                        fullWidth
-                        error={!state.emailValid}
-                        id="outlined-error"
-                        label="Email"
-                        defaultValue={state.email}
-                        margin="normal"
-                        variant="outlined"
-                        onChange={handleEmailChange}
-                    />
-                    <TextField
-                        type="password"
-                        fullWidth
-                        error={!state.passwordValid}
-                        id="outlined-error"
-                        label="Password"
-                        defaultValue={state.password}
-                        margin="normal"
-                        variant="outlined"
-                        onChange={handlePasswordChange}
-                    />
+                    <TextField fullWidth error={!state.emailValid} id="outlined-error" label="Email" defaultValue={state.email} margin="normal" variant="outlined" onChange={handleEmailChange}/>
+                    <TextField type="password" fullWidth error={!state.passwordValid} id="outlined-error" label="Password" defaultValue={state.password} margin="normal" variant="outlined" onChange={handlePasswordChange}/>
                     {error && (
                         <span className="error-text">{t('login_error')}</span>
                     )}
-                    <Button
-                        disabled={state.isDisable}
-                        type="submit"
-                        fullWidth
-                        variant="contained"
-                        color="primary"
-                        className={classes.submit}
-                        onClick={handleSubmit}
-                    >
+                    <Button disabled={state.isDisable} type="submit" fullWidth variant="contained" color="primary" className={classes.submit} onClick={handleSubmit}>
                         { t('login') }
                     </Button>
             </div>

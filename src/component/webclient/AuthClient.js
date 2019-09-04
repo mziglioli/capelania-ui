@@ -3,15 +3,15 @@ const webClient = require("./WebClient");
 
 export const getUserLoggedIn = () => {
     console.debug("getUserLoggedIn");
-	return webClient.makeGetRequest("http://localhost:8089/user/auth");
+	return webClient.makeGetRequest("/user/auth");
 };
 
 export const login = (email, password) => {
     console.debug("login");
-    return webClient.makePostRequest("http://localhost:8089/public/login", {email: email, password: password} );
+    return webClient.makeLoginRequest("/public/login", {email: email, password: password} );
 };
 
 export const logout = () => {
     console.debug("logout");
-    return webClient.makeGetRequest("http://localhost:8089/public/logout");
+    return webClient.makeGetRequest("/public/logout");
 };

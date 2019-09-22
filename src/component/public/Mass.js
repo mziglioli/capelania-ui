@@ -61,8 +61,7 @@ const Mass = ({ t, props }) => {
                                     <ListItemText
                                         key={post.id}
                                         primary={post.title}
-                                        secondary= {t('columns_date') + ": " + post.date}
-                                    >
+                                        secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + post.day}>
                                     </ListItemText>
                                     <p>{t('mass_start') + post.start}</p>
                                 </ListItem>

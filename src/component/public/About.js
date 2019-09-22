@@ -43,23 +43,22 @@ const About = ({ t, props }) => {
                                 {t('about_title')}
                             </Typography>
                             <Typography>
-                                Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit
-                                amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+                                {t('site_building')}
                             </Typography>
                         </Paper>
                     </Grid>
                 </Grid>
-                <Card key={"EventCard"} style={{maxWidth: '500px'}}>
-                    <CardHeader
-                        title={"test"}
-                    />
-                    <CardMedia style={{padding: '10px'}}
-                        component="iframe"
-                        image={"https://www.youtube.com/embed/C54QUqR2dng"}
-                        className={classes.media}
-                        title={"test"}
-                    />
-                </Card>
+                {/*<Card key={"EventCard"} style={{maxWidth: '500px'}}>*/}
+                {/*    <CardHeader*/}
+                {/*        title={"test"}*/}
+                {/*    />*/}
+                {/*    <CardMedia style={{padding: '10px'}}*/}
+                {/*        component="iframe"*/}
+                {/*        image={"https://www.youtube.com/embed/C54QUqR2dng"}*/}
+                {/*        className={classes.media}*/}
+                {/*        title={"test"}*/}
+                {/*    />*/}
+                {/*</Card>*/}
             </main>
         </Container>
     );

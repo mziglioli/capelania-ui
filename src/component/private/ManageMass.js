@@ -29,7 +29,7 @@ const ManageMass = ({ t, appState }) => {
             columns={[
                 { title: t('columns_title'), field: 'title' },
                 { title: t('columns_description'), field: 'description' },
-                { title: t('columns_type'), field: 'type' },
+                { title: t('columns_type'), field: 'weekly', type: 'boolean'  },
                 { title: t('columns_date'), field: 'date' },
                 { title: t('columns_day'), field: 'day' },
                 { title: t('columns_start'), field: 'start' },

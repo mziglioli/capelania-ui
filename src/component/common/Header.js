@@ -120,7 +120,10 @@ const Header = ({t, isAuth, user, removeUser}) => {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-    const preSelectedLanguage = i18n.language;
+    let preSelectedLanguage = i18n.language;
+    if (!preSelectedLanguage) {
+        preSelectedLanguage = "en";
+    }
     const [flag, setFlag] = useState(preSelectedLanguage);
     const isMenuOpen = Boolean(anchorEl);
 
@@ -164,9 +167,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Capelania
-                    </Typography>
+                    <img height="60px" width="60px" src={window.location.origin + "/capelania_logo.jpeg"}  />
                     <div className={classes.grow} />
                     {isAuth && (
                         <Typography className={classes.welcome} noWrap>
@@ -219,10 +220,6 @@ const Header = ({t, isAuth, user, removeUser}) => {
                 <ListItem button key={"DrawerPublicMassItem"} component="a" href="/mass">
                     <ListItemIcon><ChristianityOutlineIcon/></ListItemIcon>
                     <ListItemText primary={t('menu_masses')} />
-                </ListItem>
-                <ListItem button key={"DrawerPostsItem"} component="a" href="/posts">
-                    <ListItemIcon><LocalPostOfficeIcon/></ListItemIcon>
-                    <ListItemText primary={t('menu_posts')} />
                 </ListItem>
                 <ListItem button key={"DrawerPublicEventItem"} component="a" href="/events">
                     <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>

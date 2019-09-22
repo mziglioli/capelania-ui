@@ -5,6 +5,10 @@ export const getPublic = () => {
     console.info("getAll");
     return webClient.makeGetRequest("/public/event/");
 };
+export const getPublicUpcoming = () => {
+    console.info("getPublicUpcoming");
+    return webClient.makeGetRequest("/public/event/upcoming");
+};
 export const getAll = () => {
     console.info("getAll");
 	return webClient.makeGetRequest("/event/all");

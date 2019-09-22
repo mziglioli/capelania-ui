@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -16,8 +15,6 @@ import Collapse from "@material-ui/core/Collapse/Collapse";
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import clsx from "clsx";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import {getPublic} from "../webclient/EventClient";
 import Hero from "../common/Hero";
 import GridListTile from "@material-ui/core/GridListTile/GridListTile";

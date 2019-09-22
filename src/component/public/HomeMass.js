@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar/Avatar";
+import Typography from "@material-ui/core/Typography";
 
 const massPanelStyles = makeStyles(theme => ({
 }));
@@ -32,10 +33,13 @@ const HomeMass = ({ t, successSubmit }) => {
 
     return (
         <React.Fragment>
+            <Typography variant="h6" gutterBottom>
+                {t('masses_upcoming_title')}
+            </Typography>
             <List className={classes.root} key={"massPanel"}>
                 {massList.map(post => (
                     <React.Fragment key={"massPanelFragment_" + post.id}>
-                        <ListItem alignItems="flex-start" key={post.title}>
+                        <ListItem alignItems="flex-start" key={post.title} component="a" href="/mass">
                             <ListItemText
                                 key={post.id}
                                 primary={post.title}

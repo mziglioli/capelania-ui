@@ -16,9 +16,10 @@ import {I18nextProvider} from 'react-i18next';
 import i18n from './i18n';
 import {getUser, removeUser, setUser} from "./component/utils/UserUtils";
 import Events from "./component/public/Events";
-import ManagePosts from "./component/private/ManagePosts";
 import Mass from "./component/public/Mass";
 import ManageEvents from "./component/private/ManageEvents";
+import Policy from "./component/public/Policy";
+import Terms from "./component/public/Terms";
 
 class App extends React.Component {
     constructor(props) {
@@ -59,10 +60,11 @@ class App extends React.Component {
                                 <Route exact path="/logout" component={Home} />
                                 <Route exact path="/events" component={Events} />
                                 <Route exact path="/mass" component={Mass} />
+                                <Route exact path="/policy" component={Policy} />
+                                <Route exact path="/terms" component={Terms} />
 
                                 <PrivateRoute path='/auth/users' appState={this.state} component={ManageUser} />
                                 <PrivateRoute path='/auth/masses' appState={this.state} component={ManageMass}/>
-                                <PrivateRoute path='/auth/posts' appState={this.state} component={ManagePosts}/>
                                 <PrivateRoute path='/auth/events' appState={this.state} component={ManageEvents}/>
 
                                 <Route path="/login"  render={(props) => (

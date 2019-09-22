@@ -9,10 +9,13 @@ import {withTranslation} from "react-i18next";
 import HomeMass from "./HomeMass";
 import Hero from "../common/Hero";
 import Link from "@material-ui/core/Link/Link";
+import PlaceForYouCard from "../common/PlaceForYouCard";
+import HomeEvents from "./HomeEvents";
 
 const useStyles = makeStyles(theme => ({
     mainGrid: {
-        padding: '20px'
+        padding: '20px',
+        paddingBottom: '20px'
     },
     card: {
         display: 'flex',
@@ -35,6 +38,9 @@ const Home = ({ t, props }) => {
                         <HomeMass {...props} />
                     </Grid>
                     <Grid item xs={12} md={6} style={{padding: '10px'}}>
+                        <HomeEvents {...props} />
+                    </Grid>
+                    <Grid item xs={12} md={6} style={{padding: '10px'}}>
                         <Paper elevation={0} className={classes.sidebarAboutBox}>
                             <Typography variant="h6" gutterBottom>
                                 {t('home_about_title')}
@@ -47,15 +53,13 @@ const Home = ({ t, props }) => {
                             </Link>
                         </Paper>
                     </Grid>
-                </Grid>
-                <Grid container className={classes.mainGrid}>
-                    <Grid item xs={12} md={12}>
-                        <Typography variant="h6" gutterBottom>
-                            {t('home_about_footer_title')}
-                        </Typography>
-                        <Divider />
-                        {t('home_about_footer_body')}
+                    <Grid item xs={12} md={6} style={{padding: '10px'}}>
+                        <PlaceForYouCard />
                     </Grid>
+                </Grid>
+
+                <Grid container className={classes.mainGrid}>
+
                 </Grid>
             </main>
         </Container>

@@ -6,15 +6,11 @@ import Divider from "@material-ui/core/Divider/Divider";
 import ListItem from "@material-ui/core/ListItem/ListItem";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar/Avatar";
 import Typography from "@material-ui/core/Typography";
-
-const massPanelStyles = makeStyles(theme => ({
-}));
+import appStyles from "../common/Styles";
 
 const HomeMass = ({ t, successSubmit }) => {
-    const classes = massPanelStyles();
+    const classes = appStyles();
     const [massList, setMassList] = useState([]);
 
     useEffect(() => {

@@ -11,29 +11,21 @@ import Hero from "../common/Hero";
 import Link from "@material-ui/core/Link/Link";
 import PlaceForYouCard from "../common/PlaceForYouCard";
 import HomeEvents from "./HomeEvents";
-
-const useStyles = makeStyles(theme => ({
-    mainGrid: {
-        padding: '20px',
-        paddingBottom: '20px'
-    },
-    card: {
-        display: 'flex',
-    },
-    sidebarAboutBox: {
-        padding: theme.spacing(2),
-        backgroundColor: theme.palette.grey[200],
-    },
-}));
+import appStyles from "../common/Styles";
 
 const Home = ({ t, props }) => {
-    const classes = useStyles();
+    const classes = appStyles();
 
     return (
         <Container maxWidth="xl">
             <main>
                 <Hero {...props}/>
-                <Grid container style={{backgroundColor: 'white'}}>
+                <Grid container className={classes.mainContent}>
+                    <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
+                        <Typography style={{padding: '10px'}}>
+                            {t('intro')}
+                        </Typography>
+                    </Grid>
                     <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
                         <HomeMass {...props} />
                     </Grid>

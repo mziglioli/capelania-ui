@@ -20,7 +20,21 @@ import Mass from "./component/public/Mass";
 import ManageEvents from "./component/private/ManageEvents";
 import Policy from "./component/public/Policy";
 import Terms from "./component/public/Terms";
+import ManageOpening from "./component/private/ManageOpening";
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
+// Or Create your Own theme:
+const theme = createMuiTheme({
+        palette: {
+            primary: {
+                light: '#fff8e1',
+                main: '#ffc107',
+                dark: '#ff6f00',
+                contrastText: '#fff',
+            }
+        }
+    },
+)
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -48,6 +62,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <MuiThemeProvider theme={theme}>
                 <CssBaseline />
                 <I18nextProvider i18n={ i18n }>
                     <Router>
@@ -66,6 +81,7 @@ class App extends React.Component {
                                 <PrivateRoute path='/auth/users' appState={this.state} component={ManageUser} />
                                 <PrivateRoute path='/auth/masses' appState={this.state} component={ManageMass}/>
                                 <PrivateRoute path='/auth/events' appState={this.state} component={ManageEvents}/>
+                                <PrivateRoute path='/auth/opening' appState={this.state} component={ManageOpening}/>
 
                                 <Route path="/login"  render={(props) => (
                                     <Login {...props} addUser={this.addUser} appState={this.state}/>
@@ -76,6 +92,7 @@ class App extends React.Component {
                         <Footer/>
                     </Router>
                 </I18nextProvider>
+                </MuiThemeProvider>
             </React.Fragment>
         );
     }

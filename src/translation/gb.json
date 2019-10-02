@@ -1,5 +1,9 @@
 {
   "welcome": "Welcome to React.js",
+  "intro": "The Santa Rita de Cassia Catholic Chaplaincy is a haven for Portuguese-speaking Catholics in Manchester. Come join us and allow the Lord to change your life and transform your story for the better.",
+  "intro_2": "The immigrant's life is not easy, because we face different problems such as adaptation to the language, the rules of the new country, emotional, financial problems, etc. But we are not alone, we have a kind God we can always count on. With Him we are stronger in And we can all. Jesus himself experienced our reality in the flesh when he had to flee with his family to Egypt.",
+  "intro_about": "Here you can be in full communion with the Church by actively participating in the sacraments (infant baptism, confirmation, marriage and confession), Holy Mass and fraternal life in community. Come join us and allow the Lord to change your life and transform your story for the better.",
+  "intro_footer": "If God is for us, who will be against us? Rm 8.31",
   "loginMessage":"Please login here",
   "login":"Login",
   "login_error":"Something went wrong, please try again",
@@ -53,5 +57,18 @@
   "place_for_you_body": "Come be part of this family you too",
   "site_building": "Sorry, we will building it",
   "masses_upcoming_title": "Upcoming Masses",
-  "events_upcoming_title": "Upcoming Events"
+  "events_upcoming_title": "Upcoming Events",
+  "Name": "Name",
+  "Email": "Email",
+  "emailConfirm": "Email confirm",
+  "Subject": "Subject",
+  "Text": "Text",
+  "Submit": "Submit",
+  "contactSuccess": "Contact sent successfully, please wait for our response",
+  "contactError": "Ops, something went wrong. Try again later.",
+  "select": "Select",
+  "catechism": "Catechism",
+  "baptism":  "Baptism",
+  "marriage": "Marriage",
+  "others": "Others"
 }

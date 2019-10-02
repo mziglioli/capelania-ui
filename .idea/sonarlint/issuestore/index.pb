@@ -1,8 +1,6 @@
 
 V
 &src/component/webclient/EventClient.js,0/6/069201c926c71bfa104f79c252f57e7e7035f20c
-T
-$src/component/private/ManagePosts.js,d/4/d4c7ea1693bfdbf25f1c0f9f8d134765019e336e
 U
 %src/component/private/ManageEvents.js,9/1/9198f3494936c27b8e2c264ae56d92a9b3f38e00
 S
@@ -34,3 +32,43 @@ U
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 T
 $src/component/webclient/WebClient.js,7/4/743fc5d8dced191b39afe5d05da48bf05405b1e5
+M
+src/component/public/Login.js,a/c/ac787072600f7b4e9ea5f00e77d66aa339579d24
+A
+public/index.html,f/4/f43ecdf8d666ee908aacce037b4cd72159e4741b
+U
+%src/component/webclient/MassClient.js,a/9/a94f970602cffdffb34dd1fa642a3eae5f8cd940
+W
+'src/component/common/PlaceForYouCard.js,4/2/42fb8721921485d88bf55af1a72c7256673a8cb5
+M
+src/component/public/Terms.js,d/3/d3447e914facff4b41c68d46db4a1ab754db6369
+N
+src/component/public/Policy.js,6/e/6ea98266f2ef4dd67cba5abd2ff9198d7e7e7567
+O
+src/component/public/Contact.js,6/9/6914f487f14c4ff7b37841e051170f40ff5d5f3d
+M
+src/component/public/About.js,8/3/831de55de4dce1952cae9be0b1a5acc1e2c52b5b
+L
+src/component/public/Home.js,7/9/795bc5f12fb9001947aff09ce4328dad882bb160
+N
+src/component/common/Footer.js,7/c/7c397e3b8b83aac5622237068b67c1720434ce8e
+P
+ src/component/public/HomeMass.js,4/3/434bd84d7cd404bbfbbd5c3e7cc2dd3c641ec85d
+R
+"src/component/public/HomeEvents.js,b/2/b2c4ea3cacd4e9e40ffed20f220845230e386a60
+V
+&src/component/private/ManageOpening.js,5/7/574f7cde3ec1ea83daaa04c4fc7105530bcc8a10
+X
+(src/component/webclient/OpeningClient.js,f/2/f22d3fe37918036f8fbe74c63ffae24c9f142414
+T
+$src/component/common/OpeningHours.js,4/e/4e0bb1978fa4bcf05c96f2da37832373be0d3ad0
+U
+%src/component/utils/ValidatorUtils.js,3/d/3d4e5da729e64415a0bf9c1b7aed2d607cb12d24
+W
+'src/component/public/LoginFunctional.js,4/b/4b0fbcc0c57783766ece2e544834235d65ecb861
+S
+#src/component/public/ContactForm.js,a/c/acdc6fa74dce899c4bcbf4a9b753f9fc47246a61
+X
+(src/component/webclient/ContactClient.js,6/1/6188018ddb3b1b2bf922889b93f25f7845364cda
+P
+ src/component/public/NotFound.js,7/9/794ccf72f27a881f36481a8a594d6a2cd74990ab

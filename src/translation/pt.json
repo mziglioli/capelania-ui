@@ -1,5 +1,9 @@
 {
   "welcome": "Ben vindo ao React.js",
+  "intro": "A Capelania Católica Santa Rita de Cássia é um refúgio para os católicos de língua portuguesa em Manchester. Venha participar conosco e permita que o Senhor mude a sua vida e transforme pra melhor a sua história.",
+  "intro_2": "A vida do imigrante não é fácil, pois enfrentamos problemas diversos como a adaptação à língua, às normas do novo país, problemas emocionais, financeiros, etc. Mas não estamos sozinhos, temos um Deus bondoso com quem podemos contar sempre. Com Ele somos mais fortes em E tudo podemos. O próprio Jesus experimentou na pele a nossa realidade quando teve que fugir com sua família para o Egito.",
+  "intro_about": "Aqui, você pode estar em plena comunhão com a Igreja, participando ativamente dos sacramentos (batismo para crianças, crisma, matrimônio e confissão), da Santa Missa e da vida fraterna em comunidade. Venha participar conosco e permita que o Senhor possa mudar a sua vida e transformar para melhor a sua história.",
+  "intro_footer" : "Se Deus é por nós, quem será contra nós? Rm 8,31",
   "loginMessage":"Por favor logar aqui",
   "login":"Logar",
   "login_error":"Algum erro ocorreu, por favor tente novament",
@@ -53,5 +57,18 @@
   "place_for_you_body": "Venha fazer parte desta familia você também",
   "site_building": "Descuple, site em construção",
   "masses_upcoming_title": "Futuras Missas",
-  "events_upcoming_title": "Futuros Eventos"
+  "events_upcoming_title": "Futuros Eventos",
+  "Name": "Nome",
+  "Email": "Email",
+  "emailConfirm": "Confirme o email",
+  "Subject": "Assunto",
+  "Text": "Texto",
+  "Submit": "Enviar",
+  "contactSuccess": "Contacto enviado com sucesso, entraremos em contato em breve.",
+  "contactError": "Ops, algum erro ocorreu. Por favor tente mais tarde.",
+  "select": "Selecione",
+  "catechism": "Catequismo",
+  "baptism":  "Batismo",
+  "marriage": "Casamento",
+  "others": "Outros"
 }

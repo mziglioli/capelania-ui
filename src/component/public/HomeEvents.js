@@ -7,13 +7,10 @@ import ListItem from "@material-ui/core/ListItem/ListItem";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-
-const eventPanelStyles = makeStyles(theme => ({
-}));
+import appStyles from "../common/Styles";
 
 const HomeEvents = ({ t, successSubmit }) => {
-    const classes = eventPanelStyles();
+    const classes = appStyles();
     const [eventList, setEventList] = useState([]);
 
     useEffect(() => {
@@ -32,9 +29,11 @@ const HomeEvents = ({ t, successSubmit }) => {
 
     return (
         <React.Fragment>
-            <Typography variant="h6" gutterBottom>
-                {t('events_upcoming_title')}
-            </Typography>
+            {eventList.length > 0 && (
+                <Typography variant="h6" gutterBottom>
+                    {t('events_upcoming_title')}
+                </Typography>
+            )}
             <List className={classes.root} key={"massPanel"}>
                 {eventList.map(event => (
                     <React.Fragment key={"massPanelFragment_" + event.id}>

@@ -14,12 +14,11 @@ import Hero from "../common/Hero";
 import Container from "@material-ui/core/Container/Container";
 import ChristianityIcon from "mdi-material-ui/Christianity";
 import EggEasterIcon from "mdi-material-ui/EggEaster";
+import appStyles from "../common/Styles";
 
-const massPanelStyles = makeStyles(theme => ({
-}));
 
 const Mass = ({ t, props }) => {
-    const classes = massPanelStyles();
+    const classes = appStyles();
     const [massList, setMassList] = useState([]);
 
     useEffect(() => {
@@ -42,34 +41,35 @@ const Mass = ({ t, props }) => {
         <Container maxWidth="xl">
             <main>
                 <Hero {...props}/>
-                <Grid container style={{backgroundColor: 'white', padding: '10px'}} key={"gridAbout"}>
-                    <Typography variant="h6" gutterBottom style={{width: '100%'}}>
-                        {t('mass_header_title')}
-                    </Typography>
-                    <Typography>
-                        {t('mass_header_body')}
-                    </Typography>
+                <Grid container className={classes.mainContent} key={"gridMass"}>
+                    <Grid item key={"gridAbout"} xs={12} md={12} style={{padding: '10px'}}>
+                        <Typography variant="h6" gutterBottom style={{width: '100%'}}>
+                            {t('mass_header_title')}
+                        </Typography>
+                    </Grid>
+
+                    <Grid item key={"gridMasses"} xs={12} md={12} className={classes.sidebarAboutBox} style={{margin: 10}}>
+                        <List className={classes.sidebarAboutBox} key={"massPanel"}>
+                            {massList.map(post => (
+                                <React.Fragment key={"massPanelFragment_" + post.id}>
+                                    <ListItem alignItems="flex-start" key={post.title}>
+                                        <ListItemAvatar>
+                                            {post.type == 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
+                                        </ListItemAvatar>
+                                        <ListItemText
+                                            key={post.id}
+                                            primary={post.title}
+                                            secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + post.day}>
+                                        </ListItemText>
+                                        <p>{t('mass_start') + post.start}</p>
+                                    </ListItem>
+                                    <Divider />
+                                </React.Fragment>
+                            ))}
+                        </List>
+                    </Grid>
                 </Grid>
-                <Grid item key={"gridMasses"} xs={12} md={6} style={{padding: '10px'}}>
-                    <List className={classes.root} key={"massPanel"}>
-                        {massList.map(post => (
-                            <React.Fragment key={"massPanelFragment_" + post.id}>
-                                <ListItem alignItems="flex-start" key={post.title}>
-                                    <ListItemAvatar>
-                                        {post.type == 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
-                                    </ListItemAvatar>
-                                    <ListItemText
-                                        key={post.id}
-                                        primary={post.title}
-                                        secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + post.day}>
-                                    </ListItemText>
-                                    <p>{t('mass_start') + post.start}</p>
-                                </ListItem>
-                                <Divider />
-                            </React.Fragment>
-                        ))}
-                    </List>
-                </Grid>
+
             </main>
         </Container>
     );

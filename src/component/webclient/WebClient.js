@@ -79,7 +79,7 @@ export const handleResponse = response => {
         return json;
     }).catch(error => {
         console.info("handleResponse: erron on json: " + error);
-        return response;
+        return error;
     });
 };
 

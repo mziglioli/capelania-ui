@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
-import {makeStyles, useTheme, fade} from '@material-ui/core/styles';
+import {makeStyles, useTheme, createMuiTheme} from '@material-ui/core/styles';
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import Divider from "@material-ui/core/Divider/Divider";
 import ListItem from "@material-ui/core/ListItem/ListItem";
@@ -13,7 +13,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import HelpIcon from '@material-ui/icons/Help';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import FeedbackIcon from '@material-ui/icons/Feedback';
-import LocalPostOfficeIcon from '@material-ui/icons/LocalPostOffice';
 import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import Toolbar from "@material-ui/core/Toolbar/Toolbar";
@@ -27,6 +26,7 @@ import LoginIcon from 'mdi-material-ui/Login';
 import LogoutIcon from 'mdi-material-ui/Logout';
 import ChristianityOutlineIcon from 'mdi-material-ui/ChristianityOutline';
 import CalendarMultipleCheckIcon from 'mdi-material-ui/CalendarMultipleCheck';
+import ScheduleIcon from '@material-ui/icons/Schedule';
 
 import Menu from '@material-ui/core/Menu';
 import Flag from 'react-world-flags';
@@ -38,14 +38,18 @@ const headerStyles = makeStyles(theme => ({
     root: {
         display: 'inline-block',
         minHeight: '20px',
+        backgroundColor: "amber",
+        padding: 0
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
-        backgroundColor: 'transparent',
-        boxShadow: 'none'
+        // backgroundColor: 'transparent',
+        boxShadow: 'none',
+        paddingRight: 20,
+        paddingLeft: 20
     },
     toolbar: {
         minHeight: '48px',
@@ -122,7 +126,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
     const [anchorEl, setAnchorEl] = useState(null);
     let preSelectedLanguage = i18n.language;
     if (!preSelectedLanguage) {
-        preSelectedLanguage = "en";
+        preSelectedLanguage = "gb";
     }
     const [flag, setFlag] = useState(preSelectedLanguage);
     const isMenuOpen = Boolean(anchorEl);
@@ -158,16 +162,21 @@ const Header = ({t, isAuth, user, removeUser}) => {
             //TODO
         });
     }
-
+    useEffect(() => {
+        if (preSelectedLanguage && (preSelectedLanguage.indexOf("gb") <0  && preSelectedLanguage.indexOf("pt") <0)) {
+            setFlag("gb");
+            i18n.changeLanguage("gb");
+        }
+    }, []);
     return (
         <Container maxWidth={false} className={classes.root}>
             <CssBaseline />
-            <AppBar color="default" position="static" className={clsx( classes.appBar, {[ classes.appBarShift]: open,})}>
+            <AppBar color="primary" position="static" className={clsx( classes.appBar, {[ classes.appBarShift]: open,})}>
                 <Toolbar className={classes.toolbar}>
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
-                    <img height="60px" width="60px" src={window.location.origin + "/capelania_logo.jpeg"}  />
+                    <img height="60px" width="60px" src={window.location.origin + "/LOGO.png"}  />
                     <div className={classes.grow} />
                     {isAuth && (
                         <Typography className={classes.welcome} noWrap>
@@ -240,6 +249,10 @@ const Header = ({t, isAuth, user, removeUser}) => {
                         <ListItem button key={"DrawerEventItem"} component="a" href="/auth/events">
                             <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>
                             <ListItemText primary={t('menu_events')} />
+                        </ListItem>
+                        <ListItem button key={"DrawerOpeningItem"} component="a" href="/auth/opening">
+                            <ListItemIcon><ScheduleIcon /></ListItemIcon>
+                            <ListItemText primary={t('menu_opening')} />
                         </ListItem>
                         {user.allRoles.indexOf("ROLE_ADMIN") >= 0 && (
                             <ListItem button key={"DrawerUserItem"} component="a" href="/auth/users">

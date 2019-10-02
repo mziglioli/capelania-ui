@@ -6,46 +6,32 @@ import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
 import Hero from "../common/Hero";
-import CardHeader from "@material-ui/core/CardHeader/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia/CardMedia";
-import CardContent from "@material-ui/core/CardContent/CardContent";
-import CardActions from "@material-ui/core/CardActions/CardActions";
-import IconButton from "@material-ui/core/IconButton/IconButton";
-import clsx from "clsx";
-import ExpandMoreIcon from "@material-ui/core/SvgIcon/SvgIcon";
-import Collapse from "@material-ui/core/Collapse/Collapse";
-import Card from "@material-ui/core/Card/Card";
-
-const aboutStyles = makeStyles(theme => ({
-    mainGrid: {
-        padding: '20px'
-    },
-    card: {
-        display: 'flex',
-    },
-    sidebarAboutBox: {
-        padding: theme.spacing(2),
-        backgroundColor: theme.palette.grey[200],
-    },
-}));
+import appStyles from "../common/Styles";
 
 const About = ({ t, props }) => {
-    const classes = aboutStyles();
+    const classes = appStyles();
 
     return (
         <Container maxWidth="xl">
             <main>
                 <Hero {...props}/>
-                <Grid container style={{backgroundColor: 'white'}}>
-                    <Grid item key={"gridAbout"} xs={12} md={6} style={{padding: '10px'}}>
-                        <Paper elevation={0} className={classes.sidebarAboutBox}>
-                            <Typography variant="h6" gutterBottom>
-                                {t('about_title')}
-                            </Typography>
-                            <Typography>
-                                {t('site_building')}
-                            </Typography>
-                        </Paper>
+                <Grid container className={classes.mainContent}>
+                    <Grid item key={"gridAbout"} xs={12} md={12} style={{padding: '10px'}}>
+                        <Typography variant="h6" gutterBottom className={classes.sidebarAboutBox}>
+                            {t('about_title')}
+                        </Typography>
+                        <Typography className={classes.sidebarAboutBox}>
+                            {t('intro')}
+                        </Typography>
+                        <Typography className={classes.sidebarAboutBox}>
+                            {t('intro_2')}
+                        </Typography>
+                        <Typography className={classes.sidebarAboutBox}>
+                            {t('intro_about')}
+                        </Typography>
+                        <Typography className={classes.sidebarAboutBox}>
+                            {t('intro_footer')}
+                        </Typography>
                     </Grid>
                 </Grid>
                 {/*<Card key={"EventCard"} style={{maxWidth: '500px'}}>*/}

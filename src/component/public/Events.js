@@ -18,37 +18,10 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {getPublic} from "../webclient/EventClient";
 import Hero from "../common/Hero";
 import GridListTile from "@material-ui/core/GridListTile/GridListTile";
-
-const eventsStyles = makeStyles(theme => ({
-    sidebarAboutBox: {
-        padding: theme.spacing(2),
-        backgroundColor: theme.palette.grey[200],
-    },
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-    },
-    expand: {
-        transform: 'rotate(0deg)',
-        marginLeft: 'auto',
-        transition: theme.transitions.create('transform', {
-            duration: theme.transitions.duration.shortest,
-        }),
-    },
-    expandOpen: {
-        transform: 'rotate(180deg)',
-    },
-    avatar: {
-        backgroundColor: red[500],
-    },
-    gridList: {
-        paddingTop: '10px',
-        paddingBottom: '10px'
-    },
-}));
+import appStyles from "../common/Styles";
 
 const Events = ({ t, props }) => {
-    const classes = eventsStyles();
+    const classes = appStyles();
     const [expanded, setExpanded] = useState(false);
     const [control, setControl] = useState([]);
     const [eventList, setEventList] = useState([]);
@@ -78,13 +51,10 @@ const Events = ({ t, props }) => {
         <Container maxWidth="xl">
             <main>
                 <Hero {...props}/>
-                <Grid container style={{backgroundColor: 'white', padding: '10px'}} key={"gridAbout"}>
-                        <Typography variant="h6" gutterBottom style={{width: '100%'}}>
-                            {t('events_header_title')}
-                        </Typography>
-                        <Typography>
-                            {t('events_header_body')}
-                        </Typography>
+                <Grid container className={classes.mainContent} key={"gridEvents"}>
+                    <Typography variant="h6" gutterBottom style={{padding: 10}}>
+                        {t('events_header_title')}
+                    </Typography>
                 </Grid>
                 <GridList cols={qtdeColumns} cellHeight={'auto'} spacing={4} className={classes.gridList}>
                     {eventList.map(event => (
@@ -92,7 +62,7 @@ const Events = ({ t, props }) => {
                             <Card key={"EventCard"+event.id}>
                                 <CardHeader
                                     title={event.title}
-                                    subheader={event.date}
+                                    subheader={event.dateDisplay}
                                 />
                                 <CardMedia
                                     className={classes.media}

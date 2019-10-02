@@ -2,37 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14a75ed1-aa14-4cc0-9f5a-8d40dc31023f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/capelania_logo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/place_for_you.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/common/PlaceForYouCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/public/HomeEvents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/public/Policy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/public/Terms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.5.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/LOGO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/common/OpeningHours.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/common/Styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/private/ManageOpening.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/public/ContactForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/webclient/ContactClient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/webclient/OpeningClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/8991474e05af79770792d735e63812262a758608" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/8991474e05af79770792d735e63812262a758608" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a92e6d122d19593d910720dee727a9df721cf2bc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a92e6d122d19593d910720dee727a9df721cf2bc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d4c7ea1693bfdbf25f1c0f9f8d134765019e336e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/common/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/common/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/private/ManageMass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/private/ManageMass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/private/ManagePosts.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Contact.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Events.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/HomeEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeEvents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/HomeMass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeMass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/public/Mass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Mass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/webclient/EventClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/EventClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/webclient/MassClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/MassClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/NotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Policy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Terms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Terms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/webclient/WebClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/WebClient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translation/gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translation/gb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translation/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translation/pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565708722571" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/component/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/component/common" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -129,19 +131,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/component/common" />
+      <recent name="$PROJECT_DIR$/src/component/webclient" />
+      <recent name="$PROJECT_DIR$/src/component/public" />
+      <recent name="$PROJECT_DIR$/src/component/private" />
+      <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\private" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\public" />
       <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\mass" />
       <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\authenticated" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/component/public" />
-      <recent name="$PROJECT_DIR$/src/component/common" />
-      <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\private" />
-      <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\webclient" />
-      <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,7 +231,12 @@
       <workItem from="1568188553978" duration="1774000" />
       <workItem from="1568380634173" duration="3294000" />
       <workItem from="1568644781264" duration="597000" />
-      <workItem from="1568648252661" duration="16448000" />
+      <workItem from="1568648252661" duration="17057000" />
+      <workItem from="1569173277762" duration="6430000" />
+      <workItem from="1569328616580" duration="3132000" />
+      <workItem from="1569420006276" duration="383000" />
+      <workItem from="1569612028901" duration="17584000" />
+      <workItem from="1569945442806" duration="8997000" />
     </task>
     <servers />
   </component>

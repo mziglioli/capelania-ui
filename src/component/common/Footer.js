@@ -7,21 +7,26 @@ import Grid from "@material-ui/core/Grid";
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import Divider from "@material-ui/core/Divider";
+import OpeningHours from "./OpeningHours";
 
 const Footer = ({t}) => {
     return (
         <footer flex="none" className="my-footer">
             <Grid container style={{backgroundColor: 'white'}}>
                 <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
-                    <Typography>
-                        0161 224 2589
-                    </Typography>
-                    <Typography>
-                        13 Thurloe St, Manchester M14 5SG
-                    </Typography>
-                    <Link color="primary" href="https://goo.gl/maps/8bbzqeCmStddYEWS8" target="_blank">
-                        {t('footer_map')}
-                    </Link>
+                    <OpeningHours/>
+                    <Divider />
+                    <div style={{padding: 10}}>
+                        <Typography>
+                            0161 224 2589
+                        </Typography>
+                        <Typography>
+                            13 Thurloe St, Manchester M14 5SG
+                        </Typography>
+                        <Link color="primary" href="https://goo.gl/maps/8bbzqeCmStddYEWS8" target="_blank">
+                            {t('footer_map')}
+                        </Link>
+                    </div>
                 </Grid>
                 <Grid item xs={12} md={6} style={{padding: '10px'}}>
                     <Typography variant="h6" gutterBottom >

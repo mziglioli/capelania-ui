@@ -70,5 +70,6 @@
   "catechism": "Catechism",
   "baptism":  "Baptism",
   "marriage": "Marriage",
-  "others": "Others"
+  "others": "Others",
+  "openingHours_title": "Opening Hours:"
 }

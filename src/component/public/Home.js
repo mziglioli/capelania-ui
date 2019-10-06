@@ -21,12 +21,12 @@ const Home = ({ t, props }) => {
             <main>
                 <Hero {...props}/>
                 <Grid container className={classes.mainContent}>
-                    <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
+                    <Grid item key={"gridHomeIntro"} xs={12} md={6} style={{padding: '10px'}}>
                         <Typography style={{padding: '10px'}}>
                             {t('intro')}
                         </Typography>
                     </Grid>
-                    <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
+                    <Grid item key={"gridHomeMass"} xs={12} md={6}>
                         <HomeMass {...props} />
                     </Grid>
                     <Grid item xs={12} md={6} style={{padding: '10px'}}>

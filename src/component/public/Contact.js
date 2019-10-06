@@ -8,6 +8,7 @@ import {withTranslation} from "react-i18next";
 import Hero from "../common/Hero";
 import ContactForm from "./ContactForm";
 import appStyles from "../common/Styles";
+import GridList from "@material-ui/core/GridList";
 
 const Contact = ({ t, props }) => {
     const classes = appStyles();
@@ -16,7 +17,7 @@ const Contact = ({ t, props }) => {
         <Container maxWidth="xl">
             <main>
                 <Hero {...props}/>
-                <Grid container className={classes.content}>
+                <Grid container className={classes.mainContent} key={"gridEvents"}>
                     <Typography className={classes.title} variant="h6" gutterBottom>
                         {t('contact_title')}
                     </Typography>

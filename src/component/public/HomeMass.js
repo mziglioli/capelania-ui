@@ -8,6 +8,11 @@ import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
 import Typography from "@material-ui/core/Typography";
 import appStyles from "../common/Styles";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import EggEasterIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import Grid from "@material-ui/core/Grid";
+import ChristianityIcon from "mdi-material-ui/Christianity";
+
 
 const HomeMass = ({ t, successSubmit }) => {
     const classes = appStyles();
@@ -29,23 +34,29 @@ const HomeMass = ({ t, successSubmit }) => {
 
     return (
         <React.Fragment>
-            <Typography variant="h6" gutterBottom>
-                {t('masses_upcoming_title')}
-            </Typography>
-            <List className={classes.root} key={"massPanel"}>
-                {massList.map(post => (
-                    <React.Fragment key={"massPanelFragment_" + post.id}>
-                        <ListItem alignItems="flex-start" key={post.title} component="a" href="/mass">
-                            <ListItemText
-                                key={post.id}
-                                primary={post.title}
-                                secondary= {t('mass_start') + post.start}
-                            />
-                        </ListItem>
-                        <Divider />
-                    </React.Fragment>
-                ))}
-            </List>
+            <Grid item key={"gridMassesHome"} xs={12} md={12} className={classes.sidebarAboutBox} style={{margin: 10}}>
+                <Typography variant="h6" gutterBottom>
+                    {t('masses_upcoming_title')}
+                </Typography>
+                <List className={classes.sidebarAboutBox} key={"massPanel"}>
+                    {massList.map(post => (
+                        <React.Fragment key={"massPanelFragment_" + post.id}>
+                            <ListItem alignItems="flex-start" key={post.title} component="a" href="/mass" style={{color: "black"}}>
+                                <ListItemAvatar>
+                                    {post.type == 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
+                                </ListItemAvatar>
+                                <ListItemText
+                                    key={post.id}
+                                    primary={post.title}
+                                    secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + post.day}>
+                                </ListItemText>
+                                <p>{t('mass_start') + post.start}</p>
+                            </ListItem>
+                            <Divider />
+                        </React.Fragment>
+                    ))}
+                </List>
+            </Grid>
         </React.Fragment>
     );
 };

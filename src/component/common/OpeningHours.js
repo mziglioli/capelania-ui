@@ -25,12 +25,11 @@ const OpeningHours = ({t}) => {
             <Typography variant="h6" gutterBottom>
                 Opening Hours:
             </Typography>
-                {openingList.map(res => (
-                    <Typography key={"opening_"+res.id}>
-                        {res.startAm} - {res.endAm} / {res.startPm} - {res.endPm}
-                    </Typography>
-                ))}
-
+            {openingList && openingList.map(res => (
+                <Typography key={"opening_"+res.id}>
+                    {res.startAm} - {res.endAm} / {res.startPm} - {res.endPm}
+                </Typography>
+            ))}
         </React.Fragment>
     );
 }

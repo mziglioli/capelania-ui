@@ -65,9 +65,9 @@ class App extends React.Component {
                 <MuiThemeProvider theme={theme}>
                 <CssBaseline />
                 <I18nextProvider i18n={ i18n }>
-                    <Router>
-                        <Header isAuth={this.state.isAuth} user={this.state.user} removeUser={this.deleteUser}/>
-                        <div className="contentContainer">
+                    <Header isAuth={this.state.isAuth} user={this.state.user} removeUser={this.deleteUser}/>
+                    <div className="contentContainer">
+                        <Router>
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route exact path="/about" component={About} />
@@ -88,9 +88,9 @@ class App extends React.Component {
                                 )} />
                                 <Route component={NotFound} />
                             </Switch>
-                        </div>
-                        <Footer/>
                     </Router>
+                    </div>
+                    <Footer/>
                 </I18nextProvider>
                 </MuiThemeProvider>
             </React.Fragment>

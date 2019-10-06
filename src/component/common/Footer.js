@@ -13,7 +13,7 @@ const Footer = ({t}) => {
     return (
         <footer flex="none" className="my-footer">
             <Grid container style={{backgroundColor: 'white'}}>
-                <Grid item key={"gridMass"} xs={12} md={6} style={{padding: '10px'}}>
+                <Grid item key={"gridFooterAddress"} xs={12} md={6} style={{padding: '10px'}}>
                     <OpeningHours/>
                     <Divider />
                     <div style={{padding: 10}}>

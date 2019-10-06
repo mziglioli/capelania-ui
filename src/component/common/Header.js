@@ -32,95 +32,11 @@ import Menu from '@material-ui/core/Menu';
 import Flag from 'react-world-flags';
 import i18n from './../../i18n';
 import { withTranslation } from "react-i18next";
-
-const drawerWidth = 200;
-const headerStyles = makeStyles(theme => ({
-    root: {
-        display: 'inline-block',
-        minHeight: '20px',
-        backgroundColor: "amber",
-        padding: 0
-    },
-    appBar: {
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        // backgroundColor: 'transparent',
-        boxShadow: 'none',
-        paddingRight: 20,
-        paddingLeft: 20
-    },
-    toolbar: {
-        minHeight: '48px',
-        padding: '0'
-    },
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    grow: {
-        flexGrow: 1,
-    },
-    hide: {
-        display: 'none',
-    },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    drawerPaper: {
-        width: drawerWidth,
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
-    },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        marginLeft: -drawerWidth,
-    },
-    contentShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginLeft: 0,
-    },
-    inputRoot: {
-        color: 'inherit',
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 7),
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: 200,
-        },
-    },
-    welcome: {
-        paddingRight: '5%',
-    }
-}));
+import appStyles from "./Styles";
 
 const Header = ({t, isAuth, user, removeUser}) => {
     console.info('HeaderL ' + JSON.stringify(user));
-    const classes = headerStyles();
+    const classes = appStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);

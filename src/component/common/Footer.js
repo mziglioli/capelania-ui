@@ -8,9 +8,11 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import Divider from "@material-ui/core/Divider";
 import OpeningHours from "./OpeningHours";
+import {MuiThemeProvider} from "@material-ui/core";
 
 const Footer = ({t}) => {
     return (
+        <React.Fragment>
         <footer flex="none" className="my-footer">
             <Grid container style={{backgroundColor: 'white'}}>
                 <Grid item key={"gridFooterAddress"} xs={12} md={6} style={{padding: '10px'}}>
@@ -53,6 +55,8 @@ const Footer = ({t}) => {
                 </Breadcrumbs>
             </Grid>
         </footer>
+        <p style={{color: "white", position: "fixed"}}>Capelania Manchester, Igreja Católica em Manchester ,Capelania Católica Santa Rita de Cássia é um refúgio para os católicos de língua portuguesa em Manchester Catholic Chaplaincy Portuguese Language in Manchester</p>
+        </React.Fragment>
     );
 }
 export default withTranslation()(Footer);

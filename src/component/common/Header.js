@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
-import {makeStyles, useTheme, createMuiTheme} from '@material-ui/core/styles';
+import {useTheme} from '@material-ui/core/styles';
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import Divider from "@material-ui/core/Divider/Divider";
 import ListItem from "@material-ui/core/ListItem/ListItem";
@@ -61,7 +61,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
         setAnchorEl(null);
     }
     function handleLanguagePT() {
-        setFlag("pt");
+        setFlag("br");
         i18n.changeLanguage("pt");
         handleMenuClose();
     }
@@ -79,9 +79,12 @@ const Header = ({t, isAuth, user, removeUser}) => {
         });
     }
     useEffect(() => {
-        if (preSelectedLanguage && (preSelectedLanguage.indexOf("gb") <0  && preSelectedLanguage.indexOf("pt") <0)) {
-            setFlag("gb");
-            i18n.changeLanguage("gb");
+        if (preSelectedLanguage && (preSelectedLanguage.indexOf("gb") <0  && preSelectedLanguage.indexOf("br") <0)) {
+            setFlag("br");
+            i18n.changeLanguage("pt");
+        } else if (preSelectedLanguage.indexOf("br") > 0) {
+            setFlag("br");
+            i18n.changeLanguage("pt");
         }
     }, []);
     return (
@@ -92,7 +95,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
-                    <img height="60px" width="60px" src={window.location.origin + "/LOGO.png"}  />
+                    <img height="60px" width="60px" alt="logo da capelania" src={window.location.origin + "/LOGO.png"}  />
                     <div className={classes.grow} />
                     {isAuth && (
                         <Typography className={classes.welcome} noWrap>
@@ -107,7 +110,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                         onClick={handleProfileMenuOpen}
                         color="inherit"
                     >
-                        <Flag code={flag} height="16" />
+                        <Flag code={flag} height={flag === "br" ? "22px" : "16px"} />
                     </IconButton>
                 </Toolbar>
             </AppBar>
@@ -120,7 +123,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                 open={isMenuOpen}
                 onClose={handleMenuClose}
             >
-                <MenuItem onClick={handleLanguagePT}> <Flag code="pt" height="16" /></MenuItem>
+                <MenuItem onClick={handleLanguagePT}> <Flag code="br" height="22" /></MenuItem>
                 <MenuItem onClick={handleLanguageGB}> <Flag code="gb" height="16" /></MenuItem>
             </Menu>
             <Drawer className={ classes.drawer} variant="persistent" anchor="left" open={open} classes={{paper:  classes.drawerPaper,}}>

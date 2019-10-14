@@ -18,6 +18,7 @@
   "menu_feeds":"Feeds",
   "menu_events":"Events",
   "menu_users":"Users",
+  "menu_opening": "Opening Hours",
   "mass_start":"Start: ",
   "mass_duration":"Length: ",
   "hero_continue_reading": "Continue reading…",
@@ -71,5 +72,14 @@
   "baptism":  "Baptism",
   "marriage": "Marriage",
   "others": "Others",
-  "openingHours_title": "Opening Hours:"
+  "openingHours_title": "Opening Hours:",
+  "day_MONDAY": "Monday",
+  "day_TUESDAY": "Tuesday",
+  "day_WEDNESDAY": "Wednesday",
+  "day_THURSDAY": "Thursday",
+  "day_FRIDAY": "Friday",
+  "day_SATURDAY": "Saturday",
+  "day_SUNDAY": "Sunday",
+  "day_Mon_Fri": "Monday to Friday",
+  "day_all": "Every day"
 }

@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -8,7 +6,6 @@ import {withTranslation} from "react-i18next";
 import Hero from "../common/Hero";
 import ContactForm from "./ContactForm";
 import appStyles from "../common/Styles";
-import GridList from "@material-ui/core/GridList";
 
 const Contact = ({ t, props }) => {
     const classes = appStyles();

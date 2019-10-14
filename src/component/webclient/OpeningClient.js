@@ -3,7 +3,7 @@ const webClient = require("./WebClient");
 
 export const getPublic = () => {
     console.info("getAll");
-    return webClient.makeGetRequest("/public/opening/");
+    return webClient.makeGetRequest("/public/opening/all");
 };
 export const getAll = () => {
     console.info("getAll");

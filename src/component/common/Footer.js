@@ -8,7 +8,6 @@ import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import Divider from "@material-ui/core/Divider";
 import OpeningHours from "./OpeningHours";
-import {MuiThemeProvider} from "@material-ui/core";
 
 const Footer = ({t}) => {
     return (
@@ -34,10 +33,10 @@ const Footer = ({t}) => {
                     <Typography variant="h6" gutterBottom >
                         {t('footer_social_media')}
                     </Typography>
-                    <a display="block" variant="linkToFacebook" href="https://www.facebook.com/people/Capelania-Manchester/100017840144954" target="_blank" key={"FacebookBoxIcon"}>
+                    <a display="block" variant="linkToFacebook" href="https://www.facebook.com/people/Capelania-Manchester/100017840144954" target="_blank" rel="noopener noreferrer" key={"FacebookBoxIcon"}>
                         <FacebookBoxIcon htmlColor="blue" fontSize="large"/>
                     </a>
-                    <a display="block" variant="linkToInstagram" href="https://www.instagram.com/catolicosemmanchester/?igshid=uoi7cyy1dbkv" target="_blank" key={"InstagramIcon"}>
+                    <a display="block" variant="linkToInstagram" href="https://www.instagram.com/catolicosemmanchester/?igshid=uoi7cyy1dbkv" target="_blank" rel="noopener noreferrer" key={"InstagramIcon"}>
                         <InstagramIcon htmlColor="red" fontSize="large"/>
                     </a>
                 </Grid>

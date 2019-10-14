@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
 import HomeMass from "./HomeMass";
@@ -29,7 +27,7 @@ const Home = ({ t, props }) => {
                     <Grid item key={"gridHomeMass"} xs={12} md={6}>
                         <HomeMass {...props} />
                     </Grid>
-                    <Grid item xs={12} md={6} style={{padding: '10px'}}>
+                    <Grid item key={"gridHomeEvents"} xs={12} md={6}>
                         <HomeEvents {...props} />
                     </Grid>
                     <Grid item xs={12} md={6} style={{padding: '10px'}}>
@@ -45,11 +43,8 @@ const Home = ({ t, props }) => {
                             </Link>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} md={6} style={{padding: '10px'}}>
-                        <PlaceForYouCard />
-                    </Grid>
+                    <PlaceForYouCard />
                 </Grid>
-
                 <Grid container className={classes.mainGrid}>
 
                 </Grid>

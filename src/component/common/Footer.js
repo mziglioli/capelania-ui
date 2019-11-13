@@ -53,7 +53,10 @@ const Footer = ({t}) => {
                 </Breadcrumbs>
             </Grid>
         </footer>
-        <p style={{color: "white", position: "fixed"}}>Capelania Manchester, Igreja Católica em Manchester ,Capelania Católica Santa Rita de Cássia é um refúgio para os católicos de língua portuguesa em Manchester Catholic Chaplaincy Portuguese Language in Manchester</p>
+        <p style={{color: "white", position: "fixed"}}>
+            Capelania Manchester, Igreja Católica em Manchester ,Capelania Católica Santa Rita de Cássia é um refúgio para os católicos de língua portuguesa em Manchester Catholic Chaplaincy Portuguese Language in Manchester
+            Igreja catolica em manchester, Igreja Brasileira em manchester, Igreja brazileira manchester, capelania Brazileira, Capelania Catolica Manchester, Catholic Chaplaincy Portuguese Language in Manchester, Portuguese catholic church in Manchester
+        </p>
         </React.Fragment>
     );
 }

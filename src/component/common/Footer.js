@@ -7,7 +7,6 @@ import Grid from "@material-ui/core/Grid";
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import Divider from "@material-ui/core/Divider";
-import Phone from "./Phone";
 
 const Footer = ({t}) => {
     return (

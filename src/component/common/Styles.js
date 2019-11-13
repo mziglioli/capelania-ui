@@ -98,7 +98,7 @@ const appStyles = makeStyles(theme => ({
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
-        backgroundSize: '50%'
+        backgroundSize: 'contain'
     },
     expand: {
         transform: 'rotate(0deg)',

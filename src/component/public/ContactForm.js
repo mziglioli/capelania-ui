@@ -4,11 +4,9 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles} from '@material-ui/core/styles';
 import { withTranslation } from "react-i18next";
 import { validateEmail } from "../utils/ValidatorUtils";
 import MenuItem from "@material-ui/core/MenuItem";
-import { green } from '@material-ui/core/colors';
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { add } from "../webclient/ContactClient";
 import {Link} from "react-router-dom";
@@ -126,7 +124,7 @@ const ContactForm = ({ t, successSubmit }) => {
                         <TextField fullWidth error={values.emailConfirm.error} id="contact-confirmEmail" name={"emailConfirm"} label={t("emailConfirm")} value={values.emailConfirm.value} margin="normal" variant="outlined" onChange={handleChange}/>
                         <TextField fullWidth select error={values.subject.error} name={"subject"} id="contact-subject" label={t("Subject")} value={values.subject.value} margin="normal" variant="outlined" onChange={handleChange}>
                             {["select", "catechism", "baptism", "marriage", "others"].map(e =>
-                                <MenuItem key={"key_"+e} value={e == "select" ? "" : e}>
+                                <MenuItem key={"key_"+e} value={e === "select" ? "" : e}>
                                     {t([e])}
                                 </MenuItem>
                             )}

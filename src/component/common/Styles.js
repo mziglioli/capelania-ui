@@ -1,6 +1,6 @@
 import React from "react";
 import {makeStyles} from "@material-ui/core";
-import {green, red} from "@material-ui/core/colors";
+import {green} from "@material-ui/core/colors";
 
 const drawerWidth = 200;
 
@@ -129,7 +129,7 @@ const appStyles = makeStyles(theme => ({
     root: {
         display: 'inline-block',
         minHeight: '20px',
-        backgroundColor: "amber",
+        backgroundColor: theme.palette.primary.main,
         padding: 0,
         flexWrap: 'wrap',
         // display: 'flex'

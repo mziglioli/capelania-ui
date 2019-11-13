@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import React, { useState, useEffect} from 'react';
 import { withTranslation } from "react-i18next";
-import {getByPage, getPublic} from "../webclient/MassClient";
+import {getPublic} from "../webclient/MassClient";
 import Divider from "@material-ui/core/Divider/Divider";
 import ListItem from "@material-ui/core/ListItem/ListItem";
 import ListItemText from "@material-ui/core/ListItemText/ListItemText";
 import List from "@material-ui/core/List/List";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar/Avatar";
 import Grid from "@material-ui/core/Grid/Grid";
 import Typography from "@material-ui/core/Typography/Typography";
 import Hero from "../common/Hero";
@@ -15,7 +13,6 @@ import Container from "@material-ui/core/Container/Container";
 import ChristianityIcon from "mdi-material-ui/Christianity";
 import EggEasterIcon from "mdi-material-ui/EggEaster";
 import appStyles from "../common/Styles";
-
 
 const Mass = ({ t, props }) => {
     const classes = appStyles();
@@ -54,7 +51,7 @@ const Mass = ({ t, props }) => {
                                 <React.Fragment key={"massPanelFragment_" + post.id}>
                                     <ListItem alignItems="flex-start" key={post.title}>
                                         <ListItemAvatar>
-                                            {post.type == 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
+                                            {post.type === 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
                                         </ListItemAvatar>
                                         <ListItemText
                                             key={post.id}

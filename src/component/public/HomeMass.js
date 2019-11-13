@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import React, { useState, useEffect } from 'react';
 import { withTranslation } from "react-i18next";
 import {getPublic} from "../webclient/MassClient";
 import Divider from "@material-ui/core/Divider/Divider";
@@ -12,7 +11,6 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import EggEasterIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Grid from "@material-ui/core/Grid";
 import ChristianityIcon from "mdi-material-ui/Christianity";
-
 
 const HomeMass = ({ t, successSubmit }) => {
     const classes = appStyles();
@@ -43,7 +41,7 @@ const HomeMass = ({ t, successSubmit }) => {
                         <React.Fragment key={"massPanelFragment_" + post.id}>
                             <ListItem alignItems="flex-start" key={post.title} component="a" href="/mass" style={{color: "black"}}>
                                 <ListItemAvatar>
-                                    {post.type == 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
+                                    {post.type === 'EASTER' ? <EggEasterIcon /> :<ChristianityIcon />}
                                 </ListItemAvatar>
                                 <ListItemText
                                     key={post.id}

@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -19,7 +18,7 @@ const Terms = ({ t, props }) => {
                     <Grid item key={"gridAbout"} xs={12} md={6} style={{padding: '10px'}}>
                         <Paper elevation={0} className={classes.sidebarAboutBox}>
                             <Typography variant="h6" gutterBottom>
-                                {t('contact_title')}
+                                {t('footer_terms')}
                             </Typography>
                             <Typography>
                                 {t('site_building')}

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -9,7 +8,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import {red} from '@material-ui/core/colors';
 import GridList from "@material-ui/core/GridList/GridList";
 import Collapse from "@material-ui/core/Collapse/Collapse";
 import IconButton from "@material-ui/core/IconButton/IconButton";

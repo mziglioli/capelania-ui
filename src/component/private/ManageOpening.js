@@ -1,13 +1,13 @@
 import React ,{ useState, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import {withTranslation} from "react-i18next";
-import {getPublic, remove, update, add} from "../webclient/OpeningClient";
+import {getAll, remove, update, add} from "../webclient/OpeningClient";
 
 const ManageOpening = ({ t, appState }) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     function findAll() {
-        getPublic().then(response => {
+        getAll().then(response => {
             if (response) {
                 setData(response);
             } else {
@@ -74,7 +74,7 @@ const ManageOpening = ({ t, appState }) => {
                     }),
             }}
             options={{
-                pageSize: 5,
+                pageSize: 7,
                 initialPage: 0
             }}
             localization={{

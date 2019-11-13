@@ -27,9 +27,7 @@ const Home = ({ t, props }) => {
                     <Grid item key={"gridHomeMass"} xs={12} md={6}>
                         <HomeMass {...props} />
                     </Grid>
-                    <Grid item key={"gridHomeEvents"} xs={12} md={6}>
-                        <HomeEvents {...props} />
-                    </Grid>
+                    <HomeEvents {...props} />
                     <Grid item xs={12} md={6} style={{padding: '10px'}}>
                         <Paper elevation={0} className={classes.sidebarAboutBox}>
                             <Typography variant="h6" gutterBottom>

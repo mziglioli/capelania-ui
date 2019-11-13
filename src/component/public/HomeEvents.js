@@ -30,26 +30,27 @@ const HomeEvents = ({ t, successSubmit }) => {
     return (
         <React.Fragment>
             {eventList.length > 0 && (
-                <Grid item key={"gridEventsHome"} xs={12} md={12} className={classes.sidebarAboutBox} style={{margin: 10}}>
-                    <Typography variant="h6" gutterBottom>
-                        {t('events_upcoming_title')}
-                    </Typography>
-                    <List className={classes.sidebarAboutBox} key={"homeEventPanel"}>
-                        {eventList.map(event => (
-                            <React.Fragment key={"massPanelFragment_" + event.id}>
-                                <ListItem alignItems="flex-start" key={event.title} component="a" href="/events">
-                                    <ListItemText
-                                        key={event.id}
-                                        primary={event.title}
-                                        secondary= {t('mass_start') + event.date}
-                                    />
-                                </ListItem>
-                                <Divider />
-                            </React.Fragment>
-                        ))}
-                    </List>
+                <Grid item key={"gridHomeEvents"} xs={12} md={6}>
+                    <Grid item key={"gridEventsHome"} xs={12} md={12} className={classes.sidebarAboutBox} style={{margin: 10}}>
+                        <Typography variant="h6" gutterBottom>
+                            {t('events_upcoming_title')}
+                        </Typography>
+                        <List className={classes.sidebarAboutBox} key={"homeEventPanel"}>
+                            {eventList.map(event => (
+                                <React.Fragment key={"massPanelFragment_" + event.id}>
+                                    <ListItem alignItems="flex-start" key={event.title} component="a" href="/events">
+                                        <ListItemText
+                                            key={event.id}
+                                            primary={event.title}
+                                            secondary= {t('mass_start') + event.date}
+                                        />
+                                    </ListItem>
+                                    <Divider />
+                                </React.Fragment>
+                            ))}
+                        </List>
+                    </Grid>
                 </Grid>
-
             )}
 
         </React.Fragment>

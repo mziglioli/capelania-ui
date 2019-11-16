@@ -1,7 +1,7 @@
 import "isomorphic-fetch";
 
-const baseURL = "http://localhost:5000";
-// const baseURL = "http://capelania-v2.5ubbtpbhjh.eu-west-2.elasticbeanstalk.com";
+// const baseURL = "http://localhost:5000";
+const baseURL = "http://capelania-v2.5ubbtpbhjh.eu-west-2.elasticbeanstalk.com";
 
 export const makeGetRequest = (endpoint) => {
     return fetch(baseURL + endpoint, {

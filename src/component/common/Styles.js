@@ -96,7 +96,7 @@ const appStyles = makeStyles(theme => ({
     },
     cover: {
         width: 100,
-        backgroundSize: 'contain'
+        backgroundSize: 'contain !important'
     },
     controls: {
         display: 'flex',

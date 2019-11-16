@@ -46,7 +46,7 @@ const HomeMass = ({ t, successSubmit }) => {
                                 <ListItemText
                                     key={post.id}
                                     primary={post.title}
-                                    secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + post.day}>
+                                    secondary= {post.date ? (t('date') + ": " + post.date + "    ") : "" + t('columns_day') + ": " + t('day_' + post.day)}>
                                 </ListItemText>
                                 <p>{t('mass_start') + post.start}</p>
                             </ListItem>

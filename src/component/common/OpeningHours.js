@@ -51,10 +51,10 @@ const OpeningHours = ({t}) => {
                         {t('day_Mon_Fri')}: {getMondayTime()}
                     </Typography>
                     <Typography key="opening_Saturday">
-                        {t('day_SATURDAY')}: {getSaturdayTime()}
+                        {t('day_Saturday')}: {getSaturdayTime()}
                     </Typography>
                     <Typography key="opening_Sunday">
-                        {t('day_SUNDAY')}: {getSundayTime()}
+                        {t('day_Sunday')}: {getSundayTime()}
                     </Typography>
                 </React.Fragment>
             )}

@@ -87,6 +87,27 @@ const appStyles = makeStyles(theme => ({
     card: {
         display: 'flex',
     },
+    details: {
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    gridEventsHome: {
+        paddingBottom: 10
+    },
+    cover: {
+        width: 100,
+        backgroundSize: 'contain'
+    },
+    controls: {
+        display: 'flex',
+        alignItems: 'center',
+        paddingLeft: theme.spacing(1),
+        paddingBottom: theme.spacing(1),
+    },
+    playIcon: {
+        height: 38,
+        width: 38,
+    },
     sidebarAboutBox: {
         padding: theme.spacing(2),
         backgroundColor: theme.palette.primary.light,
@@ -98,7 +119,7 @@ const appStyles = makeStyles(theme => ({
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
-        backgroundSize: 'contain'
+        backgroundSize: 'contain !important'
     },
     expand: {
         transform: 'rotate(0deg)',

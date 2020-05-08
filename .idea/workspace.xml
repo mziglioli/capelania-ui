@@ -2,39 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14a75ed1-aa14-4cc0-9f5a-8d40dc31023f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/component/common/Covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42fb8721921485d88bf55af1a72c7256673a8cb5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42fb8721921485d88bf55af1a72c7256673a8cb5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/434bd84d7cd404bbfbbd5c3e7cc2dd3c641ec85d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/434bd84d7cd404bbfbbd5c3e7cc2dd3c641ec85d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b0fbcc0c57783766ece2e544834235d65ecb861" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b0fbcc0c57783766ece2e544834235d65ecb861" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6914f487f14c4ff7b37841e051170f40ff5d5f3d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6914f487f14c4ff7b37841e051170f40ff5d5f3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ea98266f2ef4dd67cba5abd2ff9198d7e7e7567" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6ea98266f2ef4dd67cba5abd2ff9198d7e7e7567" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/795bc5f12fb9001947aff09ce4328dad882bb160" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/795bc5f12fb9001947aff09ce4328dad882bb160" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c397e3b8b83aac5622237068b67c1720434ce8e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7c397e3b8b83aac5622237068b67c1720434ce8e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/831de55de4dce1952cae9be0b1a5acc1e2c52b5b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/831de55de4dce1952cae9be0b1a5acc1e2c52b5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/8991474e05af79770792d735e63812262a758608" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/8991474e05af79770792d735e63812262a758608" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a92e6d122d19593d910720dee727a9df721cf2bc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a92e6d122d19593d910720dee727a9df721cf2bc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acdc6fa74dce899c4bcbf4a9b753f9fc47246a61" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acdc6fa74dce899c4bcbf4a9b753f9fc47246a61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b11d213d38a6c7401ce4da5102917c65032879d9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b11d213d38a6c7401ce4da5102917c65032879d9" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b2c4ea3cacd4e9e40ffed20f220845230e386a60" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b2c4ea3cacd4e9e40ffed20f220845230e386a60" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3447e914facff4b41c68d46db4a1ab754db6369" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3447e914facff4b41c68d46db4a1ab754db6369" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8d47fe29415759c10b5b44880a7686dd8505e0c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8d47fe29415759c10b5b44880a7686dd8505e0c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f39ecaa1c482cbe0be5abd73b0625356958ceef6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f39ecaa1c482cbe0be5abd73b0625356958ceef6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/OpeningHours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/OpeningHours.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/PlaceForYouCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/PlaceForYouCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/Styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/private/ManageOpening.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/private/ManageOpening.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/ContactForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/HomeEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/HomeMass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeMass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Mass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Mass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/public/Terms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Terms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/webclient/OpeningClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/OpeningClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/webclient/WebClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/WebClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translation/gb.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translation/gb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/translation/pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translation/pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,6 +230,16 @@
       <workItem from="1569945442806" duration="14734000" />
       <workItem from="1570274289007" duration="5836000" />
       <workItem from="1570792305575" duration="8341000" />
+      <workItem from="1574179721356" duration="304000" />
+      <workItem from="1574854487775" duration="142000" />
+      <workItem from="1583918144271" duration="604000" />
+      <workItem from="1585898452327" duration="1847000" />
+      <workItem from="1585909474529" duration="493000" />
+      <workItem from="1587123964628" duration="46000" />
+      <workItem from="1587385165477" duration="644000" />
+      <workItem from="1588333288936" duration="864000" />
+      <workItem from="1588661026302" duration="2080000" />
+      <workItem from="1588942105372" duration="1887000" />
     </task>
     <servers />
   </component>

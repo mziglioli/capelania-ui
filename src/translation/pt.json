@@ -85,9 +85,11 @@
   "day_all": "Todos os dias",
   "findInfoHere": "Encontre mais informações aqui:",
   "orContactDirect": "Ou entre em contato em um dos links abaixo:",
-  "catechismInfo": "A catequese será realizada nas dependencias da capelania",
+  "catechismInfo": "A catequese será realizada nas dependências da capelania",
   "baptismInfo":  "Informações do batismo deverão ser tratadas diretamente com o Padre.",
   "marriageInfo": "Informações do casamento deverão ser tratadas diretamente com o Padre.",
   "form": "Formulário",
-  "pleaseFillForm": "Por favor preencher o Formulário: "
+  "pleaseFillForm": "Por favor preencher o Formulário: ",
+  "covidTitle": "Covid-19",
+  "covidDescription": "Devido à pandemia, todos os serviços são cancelados, sem data prevista de retorno. Por favor, procure mais informações em nossas redes sociais."
 }

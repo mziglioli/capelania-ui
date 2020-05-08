@@ -1,19 +1,21 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import {I18nextProvider} from 'react-i18next';
+import i18n from './i18n';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 import Home from "./component/public/Home";
 import About from "./component/public/About";
+import { Login } from "./component/public/Login";
 import NotFound from "./component/public/NotFound";
 import ManageUser from "./component/private/ManageUser";
 import ManageMass from "./component/private/ManageMass";
-import {Login} from "./component/public/Login";
-import {PrivateRoute} from "./component/config/PrivateRoute";
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { PrivateRoute } from "./component/config/PrivateRoute";
 import Footer from "./component/common/Footer";
 import Contact from "./component/public/Contact";
 import Header from "./component/common/Header";
-import {I18nextProvider} from 'react-i18next';
-import i18n from './i18n';
 import {getUser, removeUser, setUser} from "./component/utils/UserUtils";
 import Events from "./component/public/Events";
 import Mass from "./component/public/Mass";
@@ -21,7 +23,7 @@ import ManageEvents from "./component/private/ManageEvents";
 import Policy from "./component/public/Policy";
 import Terms from "./component/public/Terms";
 import ManageOpening from "./component/private/ManageOpening";
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CovidAlert from "./component/common/Covid";
 
 // Or Create your Own theme:
 const theme = createMuiTheme({
@@ -34,7 +36,7 @@ const theme = createMuiTheme({
             }
         }
     },
-)
+);
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -66,6 +68,7 @@ class App extends React.Component {
                 <CssBaseline />
                 <I18nextProvider i18n={ i18n }>
                     <Header isAuth={this.state.isAuth} user={this.state.user} removeUser={this.deleteUser}/>
+                    <CovidAlert />
                     <div className="contentContainer">
                         <Router>
                             <Switch>

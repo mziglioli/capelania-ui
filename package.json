@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "4.3.1",
-    "@material-ui/icons": "^4.2.1",
-    "@material-ui/styles": "^4.2.1",
+    "@material-ui/core": "4.9.13",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.9.13",
+    "@material-ui/lab": "^4.0.0-alpha.52",
     "clsx": "^1.0.4",
     "i18next": "^17.0.10",
     "i18next-browser-languagedetector": "^3.0.3",

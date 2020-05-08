@@ -90,5 +90,7 @@
   "baptismInfo":  "Baptismal information should be dealt with directly by the priest.",
   "marriageInfo": "Wedding information should be dealt with directly by the priest.",
   "form": "Form",
-  "pleaseFillForm": "Please fill up the form: "
+  "pleaseFillForm": "Please fill up the form: ",
+  "covidTitle": "Covid-19",
+  "covidDescription": "Due to the pandemic, all services are canceled, with no expected return date. Please find out more information on our social networks."
 }

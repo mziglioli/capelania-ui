@@ -95,7 +95,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
-                    <img height="60px" width="60px" alt="logo da capelania" src={window.location.origin + "/LOGO.png"}  />
+                    <img height="55px" width="55px" style={{marginTop: '3px'}} alt="logo da capelania" src={window.location.origin + "/LOGO.png"}  />
                     <div className={classes.grow} />
                     {isAuth && (
                         <Typography className={classes.welcome} noWrap>

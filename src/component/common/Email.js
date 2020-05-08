@@ -1,12 +1,9 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
 import {withTranslation} from "react-i18next";
-import appStyles from "./Styles";
 import Typography from "@material-ui/core/Typography";
 
-const Email = ({ t, props }) => {
-    const classes = appStyles();
-
+const Email = ({ t }) => {
     return (
         <Typography style={{paddingLeft: '10px'}}>
             {t('Email')}:
@@ -15,5 +12,5 @@ const Email = ({ t, props }) => {
             </Link>
         </Typography>
     );
-}
+};
 export default withTranslation()(Email);

@@ -1,12 +1,7 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography/Typography";
-import FacebookBoxIcon from 'mdi-material-ui/FacebookBox';
-import InstagramIcon from 'mdi-material-ui/Instagram';
+import { Breadcrumbs, Divider, Grid, Link, Typography } from "@material-ui/core";
+import { FacebookBox, Instagram } from 'mdi-material-ui';
 import {withTranslation} from "react-i18next";
-import Grid from "@material-ui/core/Grid";
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
-import Divider from "@material-ui/core/Divider";
 
 const Footer = ({t}) => {
     return (
@@ -32,10 +27,10 @@ const Footer = ({t}) => {
                         {t('footer_social_media')}
                     </Typography>
                     <a display="block" variant="linkToFacebook" href="https://www.facebook.com/people/Capelania-Manchester/100017840144954" target="_blank" rel="noopener noreferrer" key={"FacebookBoxIcon"}>
-                        <FacebookBoxIcon htmlColor="blue" fontSize="large"/>
+                        <FacebookBox htmlColor="blue" fontSize="large"/>
                     </a>
                     <a display="block" variant="linkToInstagram" href="https://www.instagram.com/catolicosemmanchester/?igshid=uoi7cyy1dbkv" target="_blank" rel="noopener noreferrer" key={"InstagramIcon"}>
-                        <InstagramIcon htmlColor="red" fontSize="large"/>
+                        <Instagram htmlColor="red" fontSize="large"/>
                     </a>
                 </Grid>
             </Grid>

@@ -1,15 +1,14 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
-import HomeMass from "./HomeMass";
+
+import { Container, Grid, Link, Paper, Typography } from '@material-ui/core';
+
+import appStyles from "../common/Styles";
+
 import Hero from "../common/Hero";
-import Link from "@material-ui/core/Link/Link";
+import HomeMass from "./HomeMass";
 import PlaceForYouCard from "../common/PlaceForYouCard";
 import HomeEvents from "./HomeEvents";
-import appStyles from "../common/Styles";
 
 const Home = ({ t, props }) => {
     const classes = appStyles();

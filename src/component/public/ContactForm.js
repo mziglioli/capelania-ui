@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import Typography from '@material-ui/core/Typography';
-import { withTranslation } from "react-i18next";
-import { validateEmail } from "../utils/ValidatorUtils";
-import MenuItem from "@material-ui/core/MenuItem";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import { add } from "../webclient/ContactClient";
 import {Link} from "react-router-dom";
+import { withTranslation } from "react-i18next";
+
+import { Avatar, Button, CircularProgress, MenuItem, TextField, Typography } from '@material-ui/core';
+import { MailOutline as MailOutlineIcon } from '@material-ui/icons';
+
 import appStyles from "../common/Styles";
 
-const ContactForm = ({ t, successSubmit }) => {
+import { add } from "../webclient/ContactClient";
+import { validateEmail } from "../utils/ValidatorUtils";
+
+const ContactForm = ({ t }) => {
     const classes = appStyles();
     const [showSuccess, setShowSuccess] = useState({success: false, loading: false, showError: false});
     const initValues = {

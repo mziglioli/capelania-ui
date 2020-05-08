@@ -24,6 +24,7 @@ import Policy from "./component/public/Policy";
 import Terms from "./component/public/Terms";
 import ManageOpening from "./component/private/ManageOpening";
 import CovidAlert from "./component/common/Covid";
+import Adverts from "./component/public/Adverts";
 
 // Or Create your Own theme:
 const theme = createMuiTheme({
@@ -74,6 +75,7 @@ class App extends React.Component {
                             <Switch>
                                 <Route exact path="/" component={Home} />
                                 <Route exact path="/about" component={About} />
+                                <Route exact path="/adverts" component={Adverts} />
                                 <Route exact path="/contact" component={Contact} />
                                 <Route exact path="/logout" component={Home} />
                                 <Route exact path="/events" component={Events} />

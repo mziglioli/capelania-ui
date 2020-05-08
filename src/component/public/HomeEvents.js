@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { withTranslation } from "react-i18next";
-import {getPublicUpcoming} from "../webclient/EventClient";
-import Divider from "@material-ui/core/Divider/Divider";
-import ListItem from "@material-ui/core/ListItem/ListItem";
-import ListItemText from "@material-ui/core/ListItemText/ListItemText";
-import List from "@material-ui/core/List/List";
-import Typography from "@material-ui/core/Typography";
-import appStyles from "../common/Styles";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
 
-const HomeEvents = ({ t, successSubmit }) => {
+import { Card, CardContent, CardMedia, Grid, Typography } from "@material-ui/core";
+
+import appStyles from "../common/Styles";
+import {getPublicUpcoming} from "../webclient/EventClient";
+
+const HomeEvents = ({ t }) => {
     const classes = appStyles();
     const [eventList, setEventList] = useState([]);
 
@@ -29,7 +23,6 @@ const HomeEvents = ({ t, successSubmit }) => {
             //TODO
         });
     }
-
     return (
         <React.Fragment>
             {eventList.length > 0 && (

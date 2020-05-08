@@ -1,18 +1,14 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
-import Hero from "../common/Hero";
+
+import { Container, ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary, Grid, Link, Paper, Typography } from '@material-ui/core';
+import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+
 import appStyles from "../common/Styles";
-import Link from "@material-ui/core/Link";
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Paper from "@material-ui/core/Paper";
-import Phone from "../common/Phone";
+
 import Email from "../common/Email";
+import Hero from "../common/Hero";
+import Phone from "../common/Phone";
 
 const Contact = ({ t, props }) => {
     const classes = appStyles();

@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14a75ed1-aa14-4cc0-9f5a-8d40dc31023f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/component/common/HeaderMenuItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/common/SingleLineGridList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/Covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/Email.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/common/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/Hero.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Hero.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/OpeningHours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/OpeningHours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/Phone.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/Phone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/PlaceForYouCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/PlaceForYouCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/ContactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/ContactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/HomeEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/HomeMass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/HomeMass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/LoginFunctional.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Mass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Mass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/NotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Policy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/public/Terms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/public/Terms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/webclient/WebClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/webclient/WebClient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +125,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/component/common" />
-      <recent name="$PROJECT_DIR$/src/component/webclient" />
       <recent name="$PROJECT_DIR$/src/component/public" />
+      <recent name="$PROJECT_DIR$/src/component/webclient" />
       <recent name="$PROJECT_DIR$/src/component/private" />
       <recent name="C:\Users\Zigliolim\IdeaProjects\capelania-ui\src\component\private" />
     </key>
@@ -217,7 +240,7 @@
       <workItem from="1587385165477" duration="644000" />
       <workItem from="1588333288936" duration="864000" />
       <workItem from="1588661026302" duration="2080000" />
-      <workItem from="1588942105372" duration="2451000" />
+      <workItem from="1588942105372" duration="10256000" />
     </task>
     <servers />
   </component>

@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { withTranslation } from "react-i18next";
-import {getPublic} from "../webclient/MassClient";
-import Divider from "@material-ui/core/Divider/Divider";
-import ListItem from "@material-ui/core/ListItem/ListItem";
-import ListItemText from "@material-ui/core/ListItemText/ListItemText";
-import List from "@material-ui/core/List/List";
-import Typography from "@material-ui/core/Typography";
-import appStyles from "../common/Styles";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+
+import { Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@material-ui/core";
+
 import EggEasterIcon from "@material-ui/core/SvgIcon/SvgIcon";
-import Grid from "@material-ui/core/Grid";
-import ChristianityIcon from "mdi-material-ui/Christianity";
+import { Christianity as ChristianityIcon } from "mdi-material-ui";
+import appStyles from "../common/Styles";
+import {getPublic} from "../webclient/MassClient";
 
 const HomeMass = ({ t, successSubmit }) => {
     const classes = appStyles();

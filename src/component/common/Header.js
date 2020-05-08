@@ -1,38 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
-import {useTheme} from '@material-ui/core/styles';
-import IconButton from "@material-ui/core/IconButton/IconButton";
-import Divider from "@material-ui/core/Divider/Divider";
-import ListItem from "@material-ui/core/ListItem/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText/ListItemText";
-import Drawer from "@material-ui/core/Drawer/Drawer";
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import HomeIcon from '@material-ui/icons/Home';
-import HelpIcon from '@material-ui/icons/Help';
-import ContactsIcon from '@material-ui/icons/Contacts';
-import FeedbackIcon from '@material-ui/icons/Feedback';
-import CssBaseline from "@material-ui/core/CssBaseline/CssBaseline";
-import AppBar from "@material-ui/core/AppBar/AppBar";
-import Toolbar from "@material-ui/core/Toolbar/Toolbar";
-import Typography from "@material-ui/core/Typography/Typography";
-import MenuIcon from '@material-ui/icons/Menu';
-import { Container } from '@material-ui/core';
-import {logout} from "../webclient/AuthClient";
-import MenuItem from "@material-ui/core/MenuItem/MenuItem";
-import AccountBoxMultipleIcon from 'mdi-material-ui/AccountBoxMultiple';
-import LoginIcon from 'mdi-material-ui/Login';
-import LogoutIcon from 'mdi-material-ui/Logout';
-import ChristianityOutlineIcon from 'mdi-material-ui/ChristianityOutline';
-import CalendarMultipleCheckIcon from 'mdi-material-ui/CalendarMultipleCheck';
-import ScheduleIcon from '@material-ui/icons/Schedule';
-
-import Menu from '@material-ui/core/Menu';
 import Flag from 'react-world-flags';
 import i18n from './../../i18n';
 import { withTranslation } from "react-i18next";
 import appStyles from "./Styles";
+
+import {useTheme} from '@material-ui/core/styles';
+import { AppBar, Container, CssBaseline, Divider, Drawer, IconButton, ListItem, ListItemIcon, ListItemText, Menu, MenuItem, Toolbar, Typography } from "@material-ui/core";
+import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon } from '@material-ui/icons';
+import { Contacts as ContactsIcon, Feedback as FeedbackIcon, Home as HomeIcon, Help as HelpIcon, Menu as MenuIcon, Schedule as ScheduleIcon } from '@material-ui/icons';
+import { AccountBoxMultiple as AccountBoxMultipleIcon, CalendarMultipleCheck as CalendarMultipleCheckIcon, ChristianityOutline as ChristianityOutlineIcon,  Login as LoginIcon, Logout as LogoutIcon} from 'mdi-material-ui';
+
+import HeaderMenuItem from "./HeaderMenuItem";
+import { logout } from "../webclient/AuthClient";
 
 const Header = ({t, isAuth, user, removeUser}) => {
     console.info('HeaderL ' + JSON.stringify(user));
@@ -79,10 +59,10 @@ const Header = ({t, isAuth, user, removeUser}) => {
         });
     }
     useEffect(() => {
-        if (preSelectedLanguage && (preSelectedLanguage.indexOf("gb") <0  && preSelectedLanguage.indexOf("br") <0)) {
+        if (preSelectedLanguage && (!preSelectedLanguage.includes("gb") && !preSelectedLanguage.includes("br"))) {
             setFlag("br");
             i18n.changeLanguage("pt");
-        } else if (preSelectedLanguage.indexOf("br") > 0) {
+        } else if (preSelectedLanguage.includes("br")) {
             setFlag("br");
             i18n.changeLanguage("pt");
         }
@@ -95,7 +75,7 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     <IconButton color="inherit" aria-label="open drawer" onClick={handleDrawerOpen} edge="start" className={clsx( classes.menuButton, open && classes.hide)}>
                         <MenuIcon />
                     </IconButton>
-                    <img height="55px" width="55px" style={{marginTop: '3px'}} alt="logo da capelania" src={window.location.origin + "/LOGO.png"}  />
+                    <img height="55px" width="55px" style={{marginTop: '8px'}} alt="logo da capelania" src={window.location.origin + "/LOGO.png"}  />
                     <div className={classes.grow} />
                     {isAuth && (
                         <Typography className={classes.welcome} noWrap>
@@ -133,51 +113,21 @@ const Header = ({t, isAuth, user, removeUser}) => {
                     </IconButton>
                 </div>
                 <Divider />
-                <ListItem button key="DrawerHomeItem" component="a" href="/">
-                    <ListItemIcon><HomeIcon/></ListItemIcon>
-                    <ListItemText primary={t('menu_home')}></ListItemText>
-                </ListItem>
-                <ListItem button key={"DrawerAboutItem"} component="a" href="/about">
-                    <ListItemIcon><HelpIcon/></ListItemIcon>
-                    <ListItemText primary={t('menu_about')} />
-                </ListItem>
-                <ListItem button key={"DrawerContactItem"} component="a" href="/contact">
-                    <ListItemIcon><ContactsIcon/></ListItemIcon>
-                    <ListItemText primary={t('menu_contact')} />
-                </ListItem>
-                <ListItem button key={"DrawerPublicMassItem"} component="a" href="/mass">
-                    <ListItemIcon><ChristianityOutlineIcon/></ListItemIcon>
-                    <ListItemText primary={t('menu_masses')} />
-                </ListItem>
-                <ListItem button key={"DrawerPublicEventItem"} component="a" href="/events">
-                    <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>
-                    <ListItemText primary={t('menu_events')} />
-                </ListItem>
-
+                <HeaderMenuItem name={"menu_home"} endpoint={"/"} icon={<HomeIcon/>} />
+                <HeaderMenuItem name={"menu_about"} endpoint={"/about"} icon={<HelpIcon/>} />
+                <HeaderMenuItem name={"menu_adverts"} endpoint={"/adverts"} icon={<CalendarMultipleCheckIcon/>} />
+                <HeaderMenuItem name={"menu_contact"} endpoint={"/contact"} icon={<ContactsIcon/>} />
+                <HeaderMenuItem name={"menu_masses"} endpoint={"/mass"} icon={<ChristianityOutlineIcon/>} />
+                <HeaderMenuItem name={"menu_events"} endpoint={"/events"} icon={<CalendarMultipleCheckIcon/>} />
                 {isAuth && (
                     <React.Fragment>
                         <Divider />
-                        <ListItem button key={"DrawerMassItem"} component="a" href="/auth/masses">
-                            <ListItemIcon><ChristianityOutlineIcon/></ListItemIcon>
-                            <ListItemText primary={t('menu_masses')} />
-                        </ListItem>
-                        <ListItem button key={"DrawerFeedItem"} component="a" href="/auth/feeds">
-                            <ListItemIcon><FeedbackIcon /></ListItemIcon>
-                            <ListItemText primary={t('menu_feeds')} />
-                        </ListItem>
-                        <ListItem button key={"DrawerEventItem"} component="a" href="/auth/events">
-                            <ListItemIcon><CalendarMultipleCheckIcon /></ListItemIcon>
-                            <ListItemText primary={t('menu_events')} />
-                        </ListItem>
-                        <ListItem button key={"DrawerOpeningItem"} component="a" href="/auth/opening">
-                            <ListItemIcon><ScheduleIcon /></ListItemIcon>
-                            <ListItemText primary={t('menu_opening')} />
-                        </ListItem>
+                        <HeaderMenuItem name={"menu_masses"} endpoint={"/auth/masses"} icon={<ChristianityOutlineIcon/>} />
+                        <HeaderMenuItem name={"menu_feeds"} endpoint={"/auth/feeds"} icon={<FeedbackIcon/>} />
+                        <HeaderMenuItem name={"menu_events"} endpoint={"/auth/events"} icon={<CalendarMultipleCheckIcon/>} />
+                        <HeaderMenuItem name={"menu_opening"} endpoint={"/auth/opening"} icon={<ScheduleIcon/>} />
                         {user.allRoles.indexOf("ROLE_ADMIN") >= 0 && (
-                            <ListItem button key={"DrawerUserItem"} component="a" href="/auth/users">
-                                <ListItemIcon><AccountBoxMultipleIcon/></ListItemIcon>
-                                <ListItemText primary={t('menu_users')} />
-                            </ListItem>
+                            <HeaderMenuItem name={"menu_users"} endpoint={"/auth/users"} icon={<AccountBoxMultipleIcon/>} />
                         )}
                         <Divider />
                         <ListItem button key={"DrawerLogoutItem"} onClick={handleLogoutClick}>

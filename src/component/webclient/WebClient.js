@@ -1,7 +1,7 @@
 import "isomorphic-fetch";
 
-// const baseURL = "http://localhost:5000";
-const baseURL = "http://capelania-v2.5ubbtpbhjh.eu-west-2.elasticbeanstalk.com";
+const baseURL = "http://localhost:5000";
+// const baseURL = "http://capelania-v2.5ubbtpbhjh.eu-west-2.elasticbeanstalk.com";
 
 export const makeGetRequest = (endpoint) => {
     return fetch(baseURL + endpoint, {
@@ -59,8 +59,6 @@ export const makeDeleteRequest = (endpoint, body) => {
     })
     .then(handleResponse);
 };
-
-
 export const handleResponse = response => {
     return response.json().then(json => {
         if (!response.ok) {
@@ -81,11 +79,4 @@ export const handleResponse = response => {
         console.info("handleResponse: erron on json: " + error);
         return error;
     });
-};
-
-/**
- * handle exception
- * */
-export const handleException = (name, endpoint, error) => {
-	console.error("handleException: " + error);
 };

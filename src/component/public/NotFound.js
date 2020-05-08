@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {withTranslation} from "react-i18next";
-import Container from "@material-ui/core/Container/Container";
-import Hero from "../common/Hero";
-import Grid from "@material-ui/core/Grid/Grid";
-import Paper from "@material-ui/core/Paper/Paper";
-import Typography from "@material-ui/core/Typography/Typography";
+
+import { Container, Grid, Paper, Typography } from '@material-ui/core';
+
 import appStyles from "../common/Styles";
+
+import Hero from "../common/Hero";
 
 const NotFound = ({ t, props }) => {
     const classes = appStyles();
@@ -29,5 +29,5 @@ const NotFound = ({ t, props }) => {
             </main>
         </Container>
     );
-}
+};
 export default withTranslation()(NotFound);

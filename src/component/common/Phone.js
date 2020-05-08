@@ -1,12 +1,10 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import {withTranslation} from "react-i18next";
 import appStyles from "./Styles";
-import Typography from "@material-ui/core/Typography";
+import { Link, Typography } from "@material-ui/core";
 
 const Phone = ({ t, props }) => {
     const classes = appStyles();
-
     return (
         <Typography style={{paddingLeft: '10px'}}>
             {t('Phone')}:
@@ -15,5 +13,5 @@ const Phone = ({ t, props }) => {
             </Link>
         </Typography>
     );
-}
+};
 export default withTranslation()(Phone);

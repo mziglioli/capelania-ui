@@ -1,22 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import GridList from "@material-ui/core/GridList/GridList";
-import Collapse from "@material-ui/core/Collapse/Collapse";
-import IconButton from "@material-ui/core/IconButton/IconButton";
 import clsx from "clsx";
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Container, Grid, GridList, GridListTile, IconButton, Typography } from '@material-ui/core';
+import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+
+import appStyles from "../common/Styles";
+
 import {getPublic} from "../webclient/EventClient";
 import Hero from "../common/Hero";
-import GridListTile from "@material-ui/core/GridListTile/GridListTile";
-import appStyles from "../common/Styles";
 
 const Events = ({ t, props }) => {
     const classes = appStyles();

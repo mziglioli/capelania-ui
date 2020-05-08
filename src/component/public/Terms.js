@@ -1,11 +1,11 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 import {withTranslation} from "react-i18next";
-import Hero from "../common/Hero";
+
+import { Container, Grid, Paper, Typography } from '@material-ui/core';
+
 import appStyles from "../common/Styles";
+
+import Hero from "../common/Hero";
 
 const Terms = ({ t, props }) => {
     const classes = appStyles();

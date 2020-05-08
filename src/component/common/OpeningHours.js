@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {withTranslation} from "react-i18next";
-import Typography from '@material-ui/core/Typography';
+import { Typography } from '@material-ui/core';
 import {getPublic} from "../webclient/OpeningClient";
 
 const OpeningHours = ({t}) => {
@@ -65,5 +65,5 @@ const OpeningHours = ({t}) => {
             ))}
         </React.Fragment>
     );
-}
+};
 export default withTranslation()(OpeningHours);
